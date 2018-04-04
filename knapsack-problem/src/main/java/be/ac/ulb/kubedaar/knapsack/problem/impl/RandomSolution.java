@@ -6,7 +6,6 @@
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import static java.lang.Math.abs;
-import java.util.Arrays;
 import java.util.Random;
 import static java.util.stream.IntStream.rangeClosed;
 
