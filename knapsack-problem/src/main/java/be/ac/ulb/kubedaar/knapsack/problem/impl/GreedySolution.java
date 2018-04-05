@@ -23,6 +23,10 @@ public class GreedySolution extends Solution {
         super(pIns);
     }
 
+    public GreedySolution(Solution sol) {
+        super(sol);
+    }
+
     private int[] sortByProfit() {
         int sortedArray[] = new int[super.getItems()];
         PriorityQueue<Map.Entry<Integer, Integer>> pqueue
@@ -55,6 +59,30 @@ public class GreedySolution extends Solution {
         System.out.println("********** Greedy Soltuion **********");
         super.printSolution();
         return this;
+    }
+
+    @Override
+    public PriorityQueue sortNonInsertedList() {
+        PriorityQueue<Map.Entry<Integer, Integer>> pqueue
+                = new PriorityQueue<>(
+                        super.getItems(),
+                        Comparator.comparing(Entry::getValue, reverseOrder())
+                );
+        for (int i = 0; i < super.getItems(); i++) {
+            if (super.getSolution()[i] == 0) {
+                HashMap.Entry<Integer, Integer> e
+                        = new AbstractMap.SimpleEntry<>(
+                                i, super.getpIns().getProfits()[i]
+                        );
+                pqueue.add(e);
+            }
+        }
+        return pqueue;
+    }
+
+    @Override
+    public Solution cloneSolution() {
+        return new GreedySolution(this);
     }
 
 }

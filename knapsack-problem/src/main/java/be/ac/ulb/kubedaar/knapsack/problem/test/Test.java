@@ -5,7 +5,9 @@
  */
 package be.ac.ulb.kubedaar.knapsack.problem.test;
 
+import be.ac.ulb.kubedaar.knapsack.problem.impl.BestImprovement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.GreedySolution;
+import be.ac.ulb.kubedaar.knapsack.problem.impl.Improvement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ProblemInstance;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.RandomSolution;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ToyodaSolution;
@@ -28,6 +30,8 @@ public class Test {
         gs.getFeasibleSolution();
         ToyodaSolution ts = new ToyodaSolution(i1);
         ts.getFeasibleSolution();
+        Improvement bi = new BestImprovement(gs);
+        bi.getImprovedSolution();
     }
 
 }

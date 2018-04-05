@@ -9,6 +9,7 @@ import java.io.PrintStream;
 import static java.lang.Math.sqrt;
 import java.util.AbstractMap;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import static java.util.Comparator.reverseOrder;
 import java.util.HashMap;
@@ -42,12 +43,23 @@ public class ToyodaSolution extends Solution {
                         super.getItems(),
                         Comparator.comparing(Map.Entry::getValue, reverseOrder())
                 );
-        OUT.println("********** Toyoda Soltuion **********");
-        this.normalizeConstraints();
+    }
+
+    public ToyodaSolution(Solution sol) {
+        super(sol);
+        ToyodaSolution tmp = (ToyodaSolution) sol;
+        this.normConstraints = tmp.normConstraints.clone();
+        this.normCapacities = tmp.normCapacities.clone();
+        this.u = tmp.u.clone();
+        this.euclideanNorm = tmp.euclideanNorm;
+        this.v = tmp.v.clone();
+        this.pseudoUtility = new PriorityQueue<>(tmp.pseudoUtility);
     }
 
     @Override
     public ToyodaSolution getFeasibleSolution() {
+        OUT.println("********** Toyoda Soltuion **********");
+        this.normalizeConstraints();
         boolean again = true;
         for (int i = 0; again; i++) {
             // step 4 calculate "u"
@@ -169,6 +181,16 @@ public class ToyodaSolution extends Solution {
             }
         }
         return false;
+    }
+
+    @Override
+    public PriorityQueue sortNonInsertedList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Solution cloneSolution() {
+        return new ToyodaSolution(this);
     }
 
 }

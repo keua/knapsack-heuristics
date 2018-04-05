@@ -6,6 +6,10 @@
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import java.io.PrintStream;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
 import static java.util.stream.IntStream.rangeClosed;
 
 /**
@@ -80,18 +84,23 @@ public abstract class Solution {
         this.items = sol.items;
         this.knapsacks = sol.knapsacks;
         this.value = sol.value;
-        this.solution = sol.solution;
+        this.solution = sol.solution.clone();
 
         this.numSelected = sol.numSelected;
-        this.selected = sol.selected;
+        this.selected = sol.selected.clone();
         this.numDiscarded = sol.numDiscarded;
+        this.discarded = sol.discarded.clone();
 
-        this.resourcesUsed = sol.resourcesUsed;
-        this.violated = sol.violated;
+        this.resourcesUsed = sol.resourcesUsed.clone();
+        this.violated = sol.violated.clone();
         this.numViolated = sol.numViolated;
     }
 
     public abstract Solution getFeasibleSolution();
+
+    public abstract PriorityQueue sortNonInsertedList();
+
+    public abstract Solution cloneSolution();
 
     public int computeObjectiveFunction() {
         int c = 0;
@@ -121,6 +130,26 @@ public abstract class Solution {
 
     public boolean isFeasibleSolution() {
         return (this.numViolated == 0);
+    }
+
+    public LinkedList<Integer> getSolutionList() {
+        LinkedList<Integer> sol = new LinkedList<>();
+        for (int i = 0; i < this.items; i++) {
+            if (this.solution[i] == 1) {
+                sol.add(i);
+            }
+        }
+        return sol;
+    }
+
+    public PriorityQueue<Integer> getNonInSolutionList() {
+        PriorityQueue<Integer> notsol = new PriorityQueue<>();
+        for (int i = 0; i < this.items; i++) {
+            if (this.solution[i] == 0) {
+                notsol.add(i);
+            }
+        }
+        return notsol;
     }
 
     public void printSolution() {
@@ -189,9 +218,47 @@ public abstract class Solution {
             this.discarded[i] = 0;
             this.numDiscarded = this.numDiscarded - 1;
 
-            // update list of resources used by the surrent solution
+            // update list of resources used by the current solution
             for (i = 0; i < this.knapsacks; i++) {
                 this.resourcesUsed[i] += getpIns().getConstraints()[i][item];
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * If item was already in the solution, do nothing.
+     *
+     * @param item
+     * @return
+     */
+    public boolean removeItem(int item) {
+        if (this.solution[item] != 0) {
+            this.solution[item] = 0;
+            this.discarded[this.numDiscarded] = item;
+            this.numDiscarded++;
+            this.value -= this.getpIns().getProfits()[item]; // delta evaluation
+
+            // remove the item from the list of items not in the solution
+            // probably not the most efficient way...
+            int i = 0;
+            while (i < this.numSelected) {
+                if (this.selected[i] == item) {
+                    break;
+                }
+                i++;
+            }
+            while (i < this.numSelected - 1) {
+                this.selected[i] = this.selected[i + 1];
+                i++;
+            }
+            this.selected[i] = 0;
+            this.numSelected = this.numSelected - 1;
+
+            // update list of resources used by the current solution
+            for (i = 0; i < this.knapsacks; i++) {
+                this.resourcesUsed[i] -= getpIns().getConstraints()[i][item];
             }
             return true;
         }

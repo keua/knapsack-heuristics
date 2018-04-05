@@ -6,6 +6,8 @@
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import static java.lang.Math.abs;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Random;
 import static java.util.stream.IntStream.rangeClosed;
 
@@ -20,6 +22,11 @@ public class RandomSolution extends Solution {
     public RandomSolution(ProblemInstance pIns, long seed) {
         super(pIns);
         this.generator = new Random(seed);
+    }
+
+    public RandomSolution(Solution sol) {
+        super(sol);
+        this.generator = ((RandomSolution) sol).generator;
     }
 
     private int[] createShuffled() {
@@ -48,5 +55,15 @@ public class RandomSolution extends Solution {
         System.out.println("********** Random Soltuion **********");
         super.printSolution();
         return this;
+    }
+
+    @Override
+    public PriorityQueue sortNonInsertedList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Solution cloneSolution() {
+        return new RandomSolution(this);
     }
 }
