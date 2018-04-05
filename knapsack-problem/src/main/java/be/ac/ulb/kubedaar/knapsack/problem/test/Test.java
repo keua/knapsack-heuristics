@@ -30,8 +30,13 @@ public class Test {
         gs.getFeasibleSolution();
         ToyodaSolution ts = new ToyodaSolution(i1);
         ts.getFeasibleSolution();
-        Improvement bi = new BestImprovement(gs);
-        bi.getImprovedSolution();
+        Improvement gbi = new BestImprovement(gs);
+        gbi.getImprovedSolution();
+        Improvement rbi = new BestImprovement(rs);
+        rbi.getImprovedSolution();
+        Improvement tbi = new BestImprovement(ts);
+        tbi.getImprovedSolution();
+
     }
 
 }

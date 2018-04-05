@@ -23,8 +23,8 @@ public abstract class Improvement {
     Solution sFinalSolution;
     LinkedList<Integer> lkInitialSolution;
     PriorityQueue<Integer> nonInSolution;
-    PriorityQueue<Map.Entry<Integer, Integer>> sortedNonInSolution;
-    PriorityQueue<Map.Entry<Integer, Integer>> sortedNonInSolutionTmp;
+    PriorityQueue<Map.Entry<Integer,Object>> sortedNonInSolution;
+    PriorityQueue<Map.Entry<Integer,Object>> sortedNonInSolutionTmp;
     boolean improved;
     int k;
 

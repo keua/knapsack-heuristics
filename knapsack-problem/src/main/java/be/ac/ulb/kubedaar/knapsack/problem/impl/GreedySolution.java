@@ -81,7 +81,7 @@ public class GreedySolution extends Solution {
     }
 
     @Override
-    public Solution cloneSolution() {
+    public Solution copy() {
         return new GreedySolution(this);
     }
 

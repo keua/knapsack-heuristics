@@ -6,7 +6,12 @@
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import static java.lang.Math.abs;
-import java.util.LinkedList;
+import java.util.AbstractMap;
+import java.util.Arrays;
+import java.util.Comparator;
+import static java.util.Comparator.reverseOrder;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Random;
 import static java.util.stream.IntStream.rangeClosed;
@@ -46,6 +51,17 @@ public class RandomSolution extends Solution {
         }
     }
 
+    private void shuffleInt(Integer[] v) {
+        int j, tmp;
+        for (int i = v.length - 1; i >= 1; i--) {
+            int randomNumber = this.generator.nextInt(); // Im not sure this is really working
+            j = abs(randomNumber % i);
+            tmp = v[i];
+            v[i] = v[j];
+            v[j] = tmp;
+        }
+    }
+
     @Override
     public RandomSolution getFeasibleSolution() {
         int v[] = createShuffled();
@@ -59,11 +75,26 @@ public class RandomSolution extends Solution {
 
     @Override
     public PriorityQueue sortNonInsertedList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        PriorityQueue<Map.Entry<Integer, Integer>> pqueue
+                = new PriorityQueue<>(
+                        super.getItems(),
+                        Comparator.comparing(Map.Entry::getValue)
+                );
+        PriorityQueue nonInSol = super.getNonInSolutionList();
+        Integer v[] = (Integer[]) nonInSol.toArray(new Integer[nonInSol.size()]);
+        this.shuffleInt(v);
+        for (int i = 0; i < v.length; i++) {
+            HashMap.Entry<Integer, Integer> e
+                    = new AbstractMap.SimpleEntry<>(
+                            v[i], i
+                    );
+            pqueue.add(e);
+        }
+        return pqueue;
     }
 
     @Override
-    public Solution cloneSolution() {
+    public Solution copy() {
         return new RandomSolution(this);
     }
 }

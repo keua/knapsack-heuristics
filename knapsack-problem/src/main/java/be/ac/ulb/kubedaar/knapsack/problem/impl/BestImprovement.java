@@ -33,9 +33,7 @@ public class BestImprovement extends Improvement {
 
     @Override
     public Solution getImprovedSolution() {
-        
         while (super.improved) {
-            
             super.improved = false;
             // shuffle items in s
             super.getInitialSolution();
@@ -44,7 +42,7 @@ public class BestImprovement extends Improvement {
             super.getNonInSolution();
             super.sortedNonInSolution
                     = super.sInitialSolution.sortNonInsertedList();
-            super.solution = super.sInitialSolution.cloneSolution();
+            super.solution = super.sInitialSolution.copy();
             for (int i = 0; i < super.lkInitialSolution.size(); i++) {
                 // remove k items from shuffled s
                 for (int j = 0; j < k; j++) {
@@ -60,22 +58,18 @@ public class BestImprovement extends Improvement {
                     super.solution.checkBeforeAddItem(
                             this.sortedNonInSolutionTmp.poll().getKey()
                     );
+                    // check improvement
+                    if (super.solution.getValue() > super.sInitialSolution.getValue()) {
+                        super.sFinalSolution = super.solution.copy();
+                        super.sInitialSolution = super.sFinalSolution;
+                        super.improved = true;
+                    }
                 }
-                super.sFinalSolution
-                        = (super.sInitialSolution.getValue() > super.solution.getValue())
-                        ? super.sInitialSolution.cloneSolution()
-                        : super.solution.cloneSolution();
-                super.solution = super.sInitialSolution.cloneSolution();
-            }
-            // check improvement
-            if (super.sFinalSolution.getValue() > super.sInitialSolution.getValue()) {
-                super.sInitialSolution = super.sFinalSolution.cloneSolution();
-                super.improved = true;
             }
         }
         System.out.println("BI");
-        super.sFinalSolution.printSolution();
-        return super.sFinalSolution;
+        super.sInitialSolution.printSolution();
+        return super.sInitialSolution;
     }
 
 }

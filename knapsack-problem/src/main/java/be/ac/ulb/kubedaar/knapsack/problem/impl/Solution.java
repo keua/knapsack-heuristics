@@ -100,7 +100,7 @@ public abstract class Solution {
 
     public abstract PriorityQueue sortNonInsertedList();
 
-    public abstract Solution cloneSolution();
+    public abstract Solution copy();
 
     public int computeObjectiveFunction() {
         int c = 0;

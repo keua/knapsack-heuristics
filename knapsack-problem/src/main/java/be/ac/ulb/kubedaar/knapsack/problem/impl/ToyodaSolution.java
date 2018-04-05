@@ -9,7 +9,6 @@ import java.io.PrintStream;
 import static java.lang.Math.sqrt;
 import java.util.AbstractMap;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import static java.util.Comparator.reverseOrder;
 import java.util.HashMap;
@@ -185,11 +184,26 @@ public class ToyodaSolution extends Solution {
 
     @Override
     public PriorityQueue sortNonInsertedList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int profits[] = super.getpIns().getProfits();
+        PriorityQueue<Map.Entry<Integer, Double>> pqueue
+                = new PriorityQueue<>(
+                        super.getItems(),
+                        Comparator.comparing(Map.Entry::getValue, reverseOrder())
+                );
+        for (int i = 0; i < super.getItems(); i++) {
+            if (super.getSolution()[i] == 0) {
+                HashMap.Entry<Integer, Double> e
+                        = new AbstractMap.SimpleEntry<>(
+                                i, (double) profits[i] / v[i]
+                        );
+                pqueue.add(e);
+            }
+        }
+        return pqueue;
     }
 
     @Override
-    public Solution cloneSolution() {
+    public Solution copy() {
         return new ToyodaSolution(this);
     }
 
