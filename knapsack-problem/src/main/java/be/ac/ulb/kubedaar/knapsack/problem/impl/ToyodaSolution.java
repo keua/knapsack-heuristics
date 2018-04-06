@@ -57,7 +57,6 @@ public class ToyodaSolution extends Solution {
 
     @Override
     public ToyodaSolution getFeasibleSolution() {
-        OUT.println("********** Toyoda Soltuion **********");
         this.normalizeConstraints();
         boolean again = true;
         for (int i = 0; again; i++) {
@@ -73,7 +72,6 @@ public class ToyodaSolution extends Solution {
             // update and repeat teh process until you cannot add any new item
             again = this.addItem();
         }
-        super.printSolution();
         return this;
     }
 

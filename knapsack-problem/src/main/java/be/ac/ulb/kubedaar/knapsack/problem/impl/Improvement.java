@@ -19,31 +19,28 @@ import java.util.Random;
 public abstract class Improvement {
 
     Solution solution;
-    Solution sInitialSolution;
-    Solution sFinalSolution;
+    Solution initSolution;
     LinkedList<Integer> lkInitialSolution;
-    PriorityQueue<Integer> nonInSolution;
-    PriorityQueue<Map.Entry<Integer,Object>> sortedNonInSolution;
-    PriorityQueue<Map.Entry<Integer,Object>> sortedNonInSolutionTmp;
+    PriorityQueue<Map.Entry<Integer, Object>> sortedNonInSolution;
+    PriorityQueue<Map.Entry<Integer, Object>> tmpPqueue;
     boolean improved;
     int k;
 
     public Improvement(Solution initialSolution) {
-        this.sInitialSolution = initialSolution;
+        this.initSolution = initialSolution;
+        this.solution = this.initSolution.copy();
         this.improved = true;
     }
 
-    public void getInitialSolution() {
-        this.lkInitialSolution = this.sInitialSolution.getSolutionList();
-    }
-
-    public void getNonInSolution() {
-        this.nonInSolution = this.sInitialSolution.getNonInSolutionList();
-    }
-
     public void shuffleInitialSolution() {
+        this.lkInitialSolution = this.initSolution.getSolutionList();
         Collections.shuffle(this.lkInitialSolution, new Random(1234L));
     }
 
+    void sortNonInsertedInSolution() {
+        this.sortedNonInSolution = this.initSolution.sortNonInsertedList();
+    }
+
     public abstract Solution getImprovedSolution();
+
 }

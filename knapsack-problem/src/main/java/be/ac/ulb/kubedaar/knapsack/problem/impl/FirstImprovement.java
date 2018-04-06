@@ -11,9 +11,9 @@ import java.util.PriorityQueue;
  *
  * @author masterulb
  */
-public class BestImprovement extends Improvement {
+public class FirstImprovement extends Improvement {
 
-    public BestImprovement(Solution initialSolution) {
+    public FirstImprovement(Solution initialSolution) {
         super(initialSolution);
         super.k = 1;
     }
@@ -43,11 +43,12 @@ public class BestImprovement extends Improvement {
                     // check improvement
                     if (super.initSolution.getValue() > super.solution.getValue()) {
                         super.solution = super.initSolution.copy();
+                        super.initSolution = super.solution.copy();
                         super.improved = true;
+                        break;
                     }
                 }
             }
-            super.initSolution = super.solution.copy();
         }
         return super.solution;
     }

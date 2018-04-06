@@ -56,8 +56,6 @@ public class GreedySolution extends Solution {
         for (int i = 0; i < super.getpIns().getItems(); i++) {
             super.checkBeforeAddItem(v[i]);
         }
-        System.out.println("********** Greedy Soltuion **********");
-        super.printSolution();
         return this;
     }
 
