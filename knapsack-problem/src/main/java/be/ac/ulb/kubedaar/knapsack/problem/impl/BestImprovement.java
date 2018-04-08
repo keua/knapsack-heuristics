@@ -13,6 +13,8 @@ import java.util.PriorityQueue;
  */
 public class BestImprovement extends Improvement {
 
+    private Solution tmpSol;
+
     public BestImprovement(Solution initialSolution) {
         super(initialSolution);
         super.k = 1;
@@ -27,27 +29,24 @@ public class BestImprovement extends Improvement {
             // sort list of non-inserted items
             super.sortNonInsertedInSolution();
             for (int i = 0; i < super.lkInitialSolution.size(); i++) {
-                // remove k items from shuffled s
-                for (int j = 0; j < k; j++) {
-                    super.initSolution.removeItem(
-                            super.lkInitialSolution.get(i + j)
-                    );
-                }
+                this.tmpSol = super.initSolution.copy();
+                // remove k=1 items from shuffled s
+                this.tmpSol.removeItem(super.lkInitialSolution.get(i));
                 // try to add non-selected items, one by one, from the sorted list
                 super.tmpPqueue = new PriorityQueue<>(super.sortedNonInSolution);
                 while (!tmpPqueue.isEmpty()) {
                     // check feasibility 
-                    super.initSolution.checkBeforeAddItem(
+                    this.tmpSol.checkBeforeAddItem(
                             tmpPqueue.poll().getKey()
                     );
                     // check improvement
-                    if (super.initSolution.getValue() > super.solution.getValue()) {
-                        super.solution = super.initSolution.copy();
+                    if (this.tmpSol.getValue() > super.solution.getValue()) {
+                        super.solution = this.tmpSol.copy();
                         super.improved = true;
                     }
                 }
             }
-            super.initSolution = super.solution.copy();
+            super.initSolution = super.solution.copy();// Apply Move
         }
         return super.solution;
     }

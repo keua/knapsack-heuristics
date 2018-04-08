@@ -5,7 +5,6 @@
  */
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Map;

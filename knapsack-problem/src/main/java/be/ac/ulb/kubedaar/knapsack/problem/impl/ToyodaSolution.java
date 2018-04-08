@@ -102,11 +102,11 @@ public class ToyodaSolution extends Solution {
             }
             buf.append(" <= ").append(this.normCapacities[i]).append("\n");
         }
-        OUT.println("Normalized Constraints \n" + buf.toString());
+        //OUT.println("Normalized Constraints \n" + buf.toString());
     }
 
     private void computeResourcesUsed(int iteration) {
-        OUT.println("********** Iteration " + iteration + " **********");
+        //OUT.println("********** Iteration " + iteration + " **********");
 
         if (iteration > 0) {
             for (double resource : this.u) {
@@ -114,8 +114,8 @@ public class ToyodaSolution extends Solution {
             }
             this.euclideanNorm = sqrt(this.euclideanNorm);
         }
-        OUT.println("eucliedan norm");
-        OUT.println(this.euclideanNorm);
+        //OUT.println("eucliedan norm");
+        //OUT.println(this.euclideanNorm);
     }
 
     private void computeV(int iteration) {
@@ -129,8 +129,8 @@ public class ToyodaSolution extends Solution {
             }
             this.v[i] = sum;
         }
-        OUT.println("v vector");
-        OUT.println(Arrays.toString(v));
+        //OUT.println("v vector");
+        //OUT.println(Arrays.toString(v));
     }
 
     private void sortAndComputePseudoUtility() {
@@ -148,8 +148,8 @@ public class ToyodaSolution extends Solution {
 
             }
         }
-        OUT.println("pseudo utility");
-        OUT.println(this.pseudoUtility.toString());
+        //OUT.println("pseudo utility");
+        //OUT.println(this.pseudoUtility.toString());
     }
 
     private boolean addItem() {
@@ -172,8 +172,8 @@ public class ToyodaSolution extends Solution {
                 this.u = utemp;
                 this.pseudoUtility.clear();// clean pseudoutility
                 this.euclideanNorm = 0.0; // clean eucliedean norm
-                OUT.println("u vector");
-                OUT.println(Arrays.toString(this.u));
+                //OUT.println("u vector");
+                //OUT.println(Arrays.toString(this.u));
                 return true;
             }
         }

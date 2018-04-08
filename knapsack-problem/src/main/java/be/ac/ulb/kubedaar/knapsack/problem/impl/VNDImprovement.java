@@ -11,13 +11,13 @@ import java.util.PriorityQueue;
  *
  * @author masterulb
  */
-public class FirstImprovement extends Improvement {
+public class VNDImprovement extends Improvement {
 
     private Solution tmpSol;
 
-    public FirstImprovement(Solution initialSolution) {
+    public VNDImprovement(Solution initialSolution) {
         super(initialSolution);
-        super.k = 1;
+        super.k = 3;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class FirstImprovement extends Improvement {
             super.sortNonInsertedInSolution();
             for (int i = 0; i < super.lkInitialSolution.size(); i++) {
                 this.tmpSol = super.initSolution.copy();
-                // remove k items from shuffled s
+                // remove k=1 items from shuffled s
                 this.tmpSol.removeItem(super.lkInitialSolution.get(i));
                 // try to add non-selected items, one by one, from the sorted list
                 super.tmpPqueue = new PriorityQueue<>(super.sortedNonInSolution);
@@ -42,14 +42,11 @@ public class FirstImprovement extends Improvement {
                     // check improvement
                     if (this.tmpSol.getValue() > super.solution.getValue()) {
                         super.solution = this.tmpSol.copy();
-                        super.initSolution = super.solution.copy();// Apply move
-                        i = 0;// Apply move
-                        super.shuffleInitialSolution();// Apply move
-                        super.sortNonInsertedInSolution();// Apply move
                         super.improved = true;
                     }
                 }
             }
+            super.initSolution = super.solution.copy();// Apply Move
         }
         return super.solution;
     }

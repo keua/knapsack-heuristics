@@ -27,7 +27,7 @@ public class Test {
         ProblemInstance i1 = ProblemInstance.readInstance("C:\\Users\\masterulb\\OneDrive - Université Libre de Bruxelles\\Master Computer Science and Engineering ULB\\Second term\\Heuristic optimization\\Implementation 1\\instances\\OR10x100-0.25_2.dat");
         i1.printProblemSummary();
         System.out.println("********** Random Soltuion **********");
-        RandomSolution rs = new RandomSolution(i1, 1234L);
+        RandomSolution rs = new RandomSolution(i1, 12345L);
         rs.getFeasibleSolution();
         rs.printSolution();
         System.out.println("********** Greedy Soltuion **********");
