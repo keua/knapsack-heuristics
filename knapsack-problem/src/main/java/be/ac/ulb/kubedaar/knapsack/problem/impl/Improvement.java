@@ -24,17 +24,28 @@ public abstract class Improvement {
     PriorityQueue<Map.Entry<Integer, Object>> tmpPqueue;
     boolean improved;
     int k;
+    private static final Long RANDOM_SEED = 12345L;//15421841L
+    private final Random randomGenerator;
 
     public Improvement(Solution initialSolution) {
         this.initSolution = initialSolution;
         this.solution = this.initSolution.copy();
         this.lkInitialSolution = new LinkedList<>();
+        randomGenerator = new Random(RANDOM_SEED);
+        this.improved = true;
+    }
+
+    public Improvement(Solution initialSolution, Long randomSeed) {
+        this.initSolution = initialSolution;
+        this.solution = this.initSolution.copy();
+        this.lkInitialSolution = new LinkedList<>();
+        this.randomGenerator = new Random(randomSeed);
         this.improved = true;
     }
 
     public void shuffleInitialSolution() {
         this.lkInitialSolution = this.initSolution.getSolutionList();
-        Collections.shuffle(this.lkInitialSolution, new Random(1234L));
+        Collections.shuffle(this.lkInitialSolution, this.randomGenerator);
     }
 
     void sortNonInsertedInSolution() {

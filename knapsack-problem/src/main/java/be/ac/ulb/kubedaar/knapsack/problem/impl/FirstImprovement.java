@@ -20,6 +20,11 @@ public class FirstImprovement extends Improvement {
         super.k = 1;
     }
 
+    public FirstImprovement(Solution initialSolution, Long randomSeed) {
+        super(initialSolution, randomSeed);
+        super.k = 1;
+    }
+
     @Override
     public Solution getImprovedSolution() {
         while (super.improved) {

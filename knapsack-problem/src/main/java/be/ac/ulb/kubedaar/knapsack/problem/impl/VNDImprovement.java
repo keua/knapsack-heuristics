@@ -23,6 +23,12 @@ public class VNDImprovement extends Improvement {
         allPossibleCombinations = new LinkedList<>();
     }
 
+    public VNDImprovement(Solution initialSolution, Long randomSeed) {
+        super(initialSolution, randomSeed);
+        super.k = 3;
+        this.allPossibleCombinations = new LinkedList<>();
+    }
+
     @Override
     public Solution getImprovedSolution() {
         for (int ki = 0; ki < this.k; ki++) { // k is here 
