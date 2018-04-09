@@ -39,15 +39,13 @@ public class FirstImprovement extends Improvement {
                     this.tmpSol.checkBeforeAddItem(
                             tmpPqueue.poll().getKey()
                     );
-                    // check improvement
-                    if (this.tmpSol.getValue() > super.solution.getValue()) {
-                        super.solution = this.tmpSol.copy();
-                        super.initSolution = super.solution.copy();// Apply move
-                        i = 0;// Apply move
-                        super.shuffleInitialSolution();// Apply move
-                        super.sortNonInsertedInSolution();// Apply move
-                        super.improved = true;
-                    }
+                }
+                // check improvement
+                if (this.tmpSol.getValue() > super.solution.getValue()) {
+                    super.solution = this.tmpSol.copy();
+                    super.initSolution = super.solution.copy();// Apply move
+                    super.improved = true;
+                    break;
                 }
             }
         }

@@ -39,11 +39,11 @@ public class BestImprovement extends Improvement {
                     this.tmpSol.checkBeforeAddItem(
                             tmpPqueue.poll().getKey()
                     );
-                    // check improvement
-                    if (this.tmpSol.getValue() > super.solution.getValue()) {
-                        super.solution = this.tmpSol.copy();
-                        super.improved = true;
-                    }
+                }
+                // check improvement
+                if (this.tmpSol.getValue() > super.solution.getValue()) {
+                    super.solution = this.tmpSol.copy();
+                    super.improved = true;
                 }
             }
             super.initSolution = super.solution.copy();// Apply Move
