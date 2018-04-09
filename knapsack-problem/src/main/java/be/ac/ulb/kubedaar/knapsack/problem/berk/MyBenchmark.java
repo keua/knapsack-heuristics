@@ -66,6 +66,14 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Fork(1)
 public class MyBenchmark {
 
+    private final static Long IMPROVEMENT_SEED = 46193826L;
+    private final static Long RANDOM_SEEDS[] = {
+        74403327L, 14376919L,
+        12791323L, 126331659L, 18727367L, 125270606L, 139474155L,
+        101511068L, 100945195L, 38821440L, 113088098L, 46020789L,
+        104713090L, 135375398L, 29529790L, 21776706L, 158655299L
+    };
+
     @State(Scope.Benchmark)
     public static class ConstructiveHeuristicsState {
 
@@ -82,19 +90,39 @@ public class MyBenchmark {
 
         private ProblemInstance pIns;
         private final static String PATH = "../instances/";
+        private int counter = 0;
 
         @Setup(Level.Trial)
         public void setup() {
             String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
             this.pIns = ProblemInstance.readInstance(PATH + fileName);
-            rs = new RandomSolution(pIns, 1324L);
-            gs = new GreedySolution(pIns);
-            ts = new ToyodaSolution(pIns);
+            counter = 0;
         }
 
-        @TearDown(Level.Trial)
-        public void doTearDown() {
-            //rs.printSolution();
+        @Setup(Level.Iteration)
+        public void initialzingSolutions(BenchmarkParams params) {
+            String method = params.getBenchmark().toLowerCase();
+            if (method.contains("random")) {
+                rs = new RandomSolution(pIns, RANDOM_SEEDS[counter]);
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            } else if (method.contains("greedy")) {
+                gs = new GreedySolution(pIns);
+            } else if (method.contains("toyoda")) {
+                ts = new ToyodaSolution(pIns);
+            }
+        }
+
+        @TearDown(Level.Iteration)
+        public void doTearDown(BenchmarkParams params) {
+            String method = params.getBenchmark().toLowerCase();
+            if (method.contains("random")) {
+                System.out.println("Profit: " + rs.getValue());
+            } else if (method.contains("greedy")) {
+                System.out.println("Profit: " + gs.getValue());
+            } else if (method.contains("toyoda")) {
+                System.out.println("Profit: " + ts.getValue());
+            }
         }
     }
 
@@ -112,22 +140,26 @@ public class MyBenchmark {
         BestImprovement gbi;
         BestImprovement tbi;
         Solution iniSol;
+        Solution improvedSol;
 
         private ProblemInstance pIns;
         private final static String PATH = "../instances/";
+        private int counter = 0;
 
         @Setup(Level.Trial)
         public void setup() {
             String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
             this.pIns = ProblemInstance.readInstance(PATH + fileName);
-            System.out.println("problem");
+            counter = 0;
         }
 
         @Setup(Level.Iteration)
         public void initialzingSolutions(BenchmarkParams params) {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("random")) {
-                iniSol = new RandomSolution(pIns, 1234L).getFeasibleSolution();
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
             } else if (method.contains("greedy")) {
                 iniSol = new GreedySolution(pIns).getFeasibleSolution();
             } else if (method.contains("toyoda")) {
@@ -135,9 +167,9 @@ public class MyBenchmark {
             }
         }
 
-        @TearDown(Level.Trial)
+        @TearDown(Level.Iteration)
         public void doTearDown() {
-            //rbi.getImprovedSolution().printSolution();
+            System.out.println("Profit: " + improvedSol.getValue());
         }
     }
 
@@ -154,23 +186,28 @@ public class MyBenchmark {
         FirstImprovement rfi;
         FirstImprovement gfi;
         FirstImprovement tfi;
+
         Solution iniSol;
+        Solution improvedSol;
 
         private ProblemInstance pIns;
         private final static String PATH = "../instances/";
+        private int counter = 0;
 
         @Setup(Level.Trial)
         public void setup() {
             String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
             this.pIns = ProblemInstance.readInstance(PATH + fileName);
-            System.out.println("problem");
+            counter = 0;
         }
 
         @Setup(Level.Iteration)
         public void initialzingSolutions(BenchmarkParams params) {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("random")) {
-                iniSol = new RandomSolution(pIns, 1234L).getFeasibleSolution();
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
             } else if (method.contains("greedy")) {
                 iniSol = new GreedySolution(pIns).getFeasibleSolution();
             } else if (method.contains("toyoda")) {
@@ -178,9 +215,9 @@ public class MyBenchmark {
             }
         }
 
-        @TearDown(Level.Trial)
+        @TearDown(Level.Iteration)
         public void doTearDown() {
-            //rs.printSolution();
+            System.out.println("Profit: " + improvedSol.getValue());
         }
     }
 
@@ -197,28 +234,38 @@ public class MyBenchmark {
         VNDImprovement rvnd;
         VNDImprovement gvnd;
         VNDImprovement tvnd;
+
         Solution iniSol;
+        Solution improvedSol;
 
         private ProblemInstance pIns;
         private final static String PATH = "../instances/";
+        private int counter = 0;
 
         @Setup(Level.Trial)
         public void setup() {
             String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
             this.pIns = ProblemInstance.readInstance(PATH + fileName);
-            System.out.println("problem");
+            counter = 0;
         }
 
         @Setup(Level.Iteration)
         public void initialzingSolutions(BenchmarkParams params) {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("random")) {
-                iniSol = new RandomSolution(pIns, 1234L).getFeasibleSolution();
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
             } else if (method.contains("greedy")) {
                 iniSol = new GreedySolution(pIns).getFeasibleSolution();
             } else if (method.contains("toyoda")) {
                 iniSol = new ToyodaSolution(pIns).getFeasibleSolution();
             }
+        }
+
+        @TearDown(Level.Iteration)
+        public void doTearDown() {
+            System.out.println("Profit: " + improvedSol.getValue());
         }
     }
 
@@ -243,64 +290,64 @@ public class MyBenchmark {
     @Benchmark
     @Measurement(iterations = 15)
     public void dTestRandomBI(Blackhole bh, BestImprovementState bis) {
-        bis.rbi = new BestImprovement(bis.iniSol);
-        bh.consume(bis.rbi.getImprovedSolution());
+        bis.rbi = new BestImprovement(bis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(bis.improvedSol = bis.rbi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void eTestGreedyBI(Blackhole bh, BestImprovementState bis) {
-        bis.gbi = new BestImprovement(bis.iniSol);
-        bh.consume(bis.gbi.getImprovedSolution());
+        bis.gbi = new BestImprovement(bis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(bis.improvedSol = bis.gbi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void fTestToyodaBI(Blackhole bh, BestImprovementState bis) {
-        bis.tbi = new BestImprovement(bis.iniSol);
-        bh.consume(bis.tbi.getImprovedSolution());
+        bis.tbi = new BestImprovement(bis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(bis.improvedSol = bis.tbi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 15)
     public void gTestRandomFI(Blackhole bh, FirstImprovementState fis) {
-        fis.rfi = new FirstImprovement(fis.iniSol);
-        bh.consume(fis.rfi.getImprovedSolution());
+        fis.rfi = new FirstImprovement(fis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(fis.improvedSol = fis.rfi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void hTestGreedyFI(Blackhole bh, FirstImprovementState fis) {
-        fis.gfi = new FirstImprovement(fis.iniSol);
-        bh.consume(fis.gfi.getImprovedSolution());
+        fis.gfi = new FirstImprovement(fis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(fis.improvedSol = fis.gfi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void iTestToyodaFI(Blackhole bh, FirstImprovementState fis) {
-        fis.tfi = new FirstImprovement(fis.iniSol);
-        bh.consume(fis.tfi.getImprovedSolution());
+        fis.tfi = new FirstImprovement(fis.iniSol, IMPROVEMENT_SEED);
+        bh.consume(fis.improvedSol = fis.tfi.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 15)
     public void jTestRandomVND(Blackhole bh, VNDImprovementState vs) {
-        vs.rvnd = new VNDImprovement(vs.iniSol);
-        bh.consume(vs.rvnd.getImprovedSolution());
+        vs.rvnd = new VNDImprovement(vs.iniSol, IMPROVEMENT_SEED);
+        bh.consume(vs.improvedSol = vs.rvnd.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void kTestGreedyVND(Blackhole bh, VNDImprovementState vs) {
-        vs.gvnd = new VNDImprovement(vs.iniSol);
-        bh.consume(vs.gvnd.getImprovedSolution());
+        vs.gvnd = new VNDImprovement(vs.iniSol, IMPROVEMENT_SEED);
+        bh.consume(vs.improvedSol = vs.gvnd.getImprovedSolution());
     }
 
     @Benchmark
     @Measurement(iterations = 1)
     public void lTestToyodaVND(Blackhole bh, VNDImprovementState vs) {
-        vs.tvnd = new VNDImprovement(vs.iniSol);
-        bh.consume(vs.tvnd.getImprovedSolution());
+        vs.tvnd = new VNDImprovement(vs.iniSol, IMPROVEMENT_SEED);
+        bh.consume(vs.improvedSol = vs.tvnd.getImprovedSolution());
     }
 
     /**
