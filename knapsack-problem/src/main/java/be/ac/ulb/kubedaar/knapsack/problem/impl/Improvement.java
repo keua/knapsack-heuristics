@@ -28,6 +28,7 @@ public abstract class Improvement {
     public Improvement(Solution initialSolution) {
         this.initSolution = initialSolution;
         this.solution = this.initSolution.copy();
+        this.lkInitialSolution = new LinkedList<>();
         this.improved = true;
     }
 

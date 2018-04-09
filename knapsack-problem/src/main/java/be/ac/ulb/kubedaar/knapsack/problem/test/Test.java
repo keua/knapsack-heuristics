@@ -12,6 +12,7 @@ import be.ac.ulb.kubedaar.knapsack.problem.impl.Improvement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ProblemInstance;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.RandomSolution;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ToyodaSolution;
+import be.ac.ulb.kubedaar.knapsack.problem.impl.VNDImprovement;
 
 /**
  *
@@ -56,6 +57,15 @@ public class Test {
         System.out.println("********** Toyoda Soltuion FI **********");
         Improvement tfi = new FirstImprovement(ts);
         tfi.getImprovedSolution().printSolution();
+        System.out.println("********** Greedy Soltuion VND **********");
+        Improvement gvnd = new VNDImprovement(gs);
+        gvnd.getImprovedSolution().printSolution();
+        System.out.println("********** Random Soltuion VND **********");
+        Improvement rvnd = new VNDImprovement(rs);
+        rvnd.getImprovedSolution().printSolution();
+        System.out.println("********** Toyoda Soltuion VND **********");
+        Improvement tvnd = new VNDImprovement(ts);
+        tvnd.getImprovedSolution().printSolution();
 
     }
 

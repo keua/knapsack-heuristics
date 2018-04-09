@@ -36,9 +36,7 @@ public class BestImprovement extends Improvement {
                 super.tmpPqueue = new PriorityQueue<>(super.sortedNonInSolution);
                 while (!tmpPqueue.isEmpty()) {
                     // check feasibility 
-                    this.tmpSol.checkBeforeAddItem(
-                            tmpPqueue.poll().getKey()
-                    );
+                    this.tmpSol.checkBeforeAddItem(tmpPqueue.poll().getKey());
                 }
                 // check improvement
                 if (this.tmpSol.getValue() > super.solution.getValue()) {
