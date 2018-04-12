@@ -60,10 +60,11 @@ public class VNDImprovement extends Improvement {
                     // check improvement
                     if (this.tmpSol.getValue() > super.solution.getValue()) {
                         super.solution = this.tmpSol.copy();
+                        super.initSolution = super.solution.copy();// Apply Move
                         super.improved = true;
+                        break;
                     }
                 }
-                super.initSolution = super.solution.copy();// Apply Move
             }
         }
         return super.solution;

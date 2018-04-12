@@ -6,9 +6,7 @@
 package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import java.io.PrintStream;
-import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.PriorityQueue;
 import static java.util.stream.IntStream.rangeClosed;
 

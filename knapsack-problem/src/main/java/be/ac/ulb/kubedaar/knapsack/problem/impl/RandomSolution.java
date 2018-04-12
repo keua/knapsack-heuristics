@@ -7,9 +7,7 @@ package be.ac.ulb.kubedaar.knapsack.problem.impl;
 
 import static java.lang.Math.abs;
 import java.util.AbstractMap;
-import java.util.Arrays;
 import java.util.Comparator;
-import static java.util.Comparator.reverseOrder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
