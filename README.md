@@ -35,6 +35,7 @@ In the runnable folder you can to find the jars for the simple execution and ben
 │   │   ├── debug-instance.dat
 │   │   ├── target/
 │   ├── aws-results/
+│   ├── report.pdf
 │   ├── README.md
 ```
 
