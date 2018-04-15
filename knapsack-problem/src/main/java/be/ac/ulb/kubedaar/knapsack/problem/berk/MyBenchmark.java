@@ -63,15 +63,15 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Warmup(iterations = 2)
-@Fork(1)
+@Fork(jvmArgs = "-Djmh.ignoreLock=true")
 public class MyBenchmark {
 
-    private final static Long IMPROVEMENT_SEED = 46193826L;
+    private final static Long IMPROVEMENT_SEED = 4619L;
     private final static Long RANDOM_SEEDS[] = {
-        74403327L, 14376919L,
-        12791323L, 126331659L, 18727367L, 125270606L, 139474155L,
-        101511068L, 100945195L, 38821440L, 113088098L, 46020789L,
-        104713090L, 135375398L, 29529790L, 21776706L, 158655299L
+        7440L, 1437L,
+        1279L, 1263L, 1872L, 1252L, 1394L,
+        1015L, 1009L, 3882L, 1130L, 4602L,
+        1047L, 1353L, 2952L, 2177L, 1586L
     };
 
     @State(Scope.Benchmark)
