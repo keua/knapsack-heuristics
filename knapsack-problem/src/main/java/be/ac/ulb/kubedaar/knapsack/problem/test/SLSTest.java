@@ -38,12 +38,6 @@ public class SLSTest {
         System.out.println("********** SA Random Soltuion **********");
         SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.98f, 0.00001f, 150, 67465L, 100d);
         sar.getSolution().printSolution();
-        /*System.out.println("********** SA Random Soltuion **********");
-        SimulatedAnnealing sar1 = new SimulatedAnnealing(nfirsol, 125f, 0.90f, 0.00001f, 100, 67465L, 250);
-        sar1.getSolution().printSolution();
-        System.out.println("********** SA Random Soltuion **********");
-        SimulatedAnnealing sar2 = new SimulatedAnnealing(nfirsol, 125f, 0.90f, 0.00001f, 100, 85465L, 250);
-        sar2.getSolution().printSolution();*/
         System.out.println("********** GA Random Soltuion **********");
         GeneticAlgorithm ga = new GeneticAlgorithm(2, 100, 100d, i1);
         ga.getSolution().printSolution();
