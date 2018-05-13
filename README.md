@@ -93,6 +93,35 @@ go to the runnable folder (`cd runnable`) and execute the following commands:
  java -jar benchmarks.jar jTestRandomVND -rff jmh-vnd-results-rnd.csv -rf csv -wi 0 -f 0 | tee jmh-vnd-results-rnd.log
  ```
 
+### Simulated Annealing (simple SLS method)
+
+#### 10x100 Instances
+```bash
+ java -jar benchmarks.jar sa10x100Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee sa10x100Instances.log
+ ```
+#### 10x250 Instances 
+```bash
+ java -jar benchmarks.jar sa10x250Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee sa10x250Instances.log
+ ```
+#### first 5 10x250 Instances
+```bash
+ java -jar benchmarks.jar saF510x250Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee saF510x250Instances.log
+ ```
+
+### Genetic Algorithm (population-based SLS method)
+
+#### 10x100 Instances
+```bash
+ java -jar benchmarks.jar ga10x100Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee ga10x100Instances.log
+ ```
+#### 10x250 Instances 
+```bash
+ java -jar benchmarks.jar ga10x250Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee ga10x250Instances.log
+ ```
+#### first 5 10x250 Instances
+```bash
+ java -jar benchmarks.jar gaF510x250Instances -rff jmh-ch-results.csv -rf csv -wi 0 | tee gaF510x250Instances.log
+ ```
 
 ## Build
 

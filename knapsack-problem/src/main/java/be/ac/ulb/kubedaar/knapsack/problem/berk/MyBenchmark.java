@@ -32,9 +32,11 @@ package be.ac.ulb.kubedaar.knapsack.problem.berk;
 
 import be.ac.ulb.kubedaar.knapsack.problem.impl.BestImprovement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.FirstImprovement;
+import be.ac.ulb.kubedaar.knapsack.problem.impl.GeneticAlgorithm;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.GreedySolution;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ProblemInstance;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.RandomSolution;
+import be.ac.ulb.kubedaar.knapsack.problem.impl.SimulatedAnnealing;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.Solution;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ToyodaSolution;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.VNDImprovement;
@@ -52,7 +54,6 @@ import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.TearDown;
-import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.BenchmarkParams;
 import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
@@ -62,7 +63,6 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 2)
 @Fork(jvmArgs = "-Djmh.ignoreLock=true")
 public class MyBenchmark {
 
@@ -348,6 +348,237 @@ public class MyBenchmark {
     public void lTestToyodaVND(Blackhole bh, VNDImprovementState vs) {
         vs.tvnd = new VNDImprovement(vs.iniSol, IMPROVEMENT_SEED);
         bh.consume(vs.improvedSol = vs.tvnd.getImprovedSolution());
+    }
+
+    @State(Scope.Benchmark)
+    public static class I10x100State {
+
+        @Param({"OR10x100-"})
+        private String aResourcesXitem;
+        @Param({"0.25", "0.50", "0.75"})
+        private String bDifficulty;
+        @Param({"_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "_9", "_10"})
+        private String cSample;
+
+        GeneticAlgorithm ga;
+        SimulatedAnnealing sa;
+        Solution iniSol;
+        Solution improvedSol;
+        Solution finalSolution;
+
+        private ProblemInstance pIns;
+        private final static String PATH = "../instances/";
+
+        int counter = 0;
+        Double maxTime = 0d;
+
+        @Setup(Level.Trial)
+        public void setup() {
+            String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
+            this.pIns = ProblemInstance.readInstance(PATH + fileName);
+            maxTime = this.pIns.getItems() * this.pIns.getKnapsacks() / 10d;
+            counter = 0;
+        }
+
+        @Setup(Level.Iteration)
+        public void initialzingSolutions(BenchmarkParams params) {
+            String method = params.getBenchmark().toLowerCase();
+            if (method.contains("ga")) {
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            } else if (method.contains("sa")) {
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            }
+        }
+
+        @TearDown(Level.Iteration)
+        public void doTearDown(BenchmarkParams params) {
+            System.out.println("Profit: " + finalSolution.getValue());
+        }
+    }
+
+    @State(Scope.Benchmark)
+    public static class I10x250State {
+
+        @Param({"OR10x250-"})
+        private String aResourcesXitem;
+        @Param({"0.25", "0.50", "0.75"})
+        private String bDifficulty;
+        @Param({"_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "_9", "_10"})
+        private String cSample;
+
+        GeneticAlgorithm ga;
+        SimulatedAnnealing sa;
+        Solution iniSol;
+        Solution improvedSol;
+        Solution finalSolution;
+
+        private ProblemInstance pIns;
+        private final static String PATH = "../instances/";
+
+        int counter = 0;
+        Double maxTime = 0d;
+
+        @Setup(Level.Trial)
+        public void setup() {
+            String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
+            this.pIns = ProblemInstance.readInstance(PATH + fileName);
+            maxTime = this.pIns.getItems() * this.pIns.getKnapsacks() / 10d;
+            counter = 0;
+        }
+
+        @Setup(Level.Iteration)
+        public void initialzingSolutions(BenchmarkParams params) {
+            String method = params.getBenchmark().toLowerCase();
+            if (method.contains("ga")) {
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            } else if (method.contains("sa")) {
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            }
+        }
+
+        @TearDown(Level.Iteration)
+        public void doTearDown(BenchmarkParams params) {
+            System.out.println("Profit: " + finalSolution.getValue());
+        }
+    }
+
+    @State(Scope.Benchmark)
+    public static class F5I10x250State {
+
+        @Param({"0.01", "0.1", "1"})
+        private Double timeFactor;
+        @Param({"OR10x250-"})
+        private String aResourcesXitem;
+        @Param({"0.25"})
+        private String bDifficulty;
+        @Param({"_1", "_2", "_3", "_4", "_5"})
+        private String cSample;
+
+        GeneticAlgorithm ga;
+        SimulatedAnnealing sa;
+        Solution iniSol;
+        Solution improvedSol;
+        Solution finalSolution;
+
+        private ProblemInstance pIns;
+        private final static String PATH = "../instances/";
+
+        int counter = 0;
+        Double maxTime = 0d;
+
+        @Setup(Level.Trial)
+        public void setup() {
+            String fileName = aResourcesXitem + bDifficulty + cSample + ".dat";
+            this.pIns = ProblemInstance.readInstance(PATH + fileName);
+            maxTime = this.pIns.getItems() * this.pIns.getKnapsacks() / 10d;
+            maxTime = timeFactor * maxTime;
+            counter = 0;
+        }
+
+        @Setup(Level.Iteration)
+        public void initialzingSolutions(BenchmarkParams params) {
+            String method = params.getBenchmark().toLowerCase();
+            if (method.contains("ga")) {
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            } else if (method.contains("sa")) {
+                iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
+                improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
+                System.out.println("RS: " + RANDOM_SEEDS[counter]);
+                counter++;
+            }
+        }
+
+        @TearDown(Level.Iteration)
+        public void doTearDown(BenchmarkParams params) {
+            System.out.println("Profit: " + finalSolution.getValue());
+        }
+    }
+
+    @Benchmark
+    @Measurement(iterations = 5)
+    public void ga10x100Instances(Blackhole bh, I10x100State state) {
+        int rateOfMutation = 2;
+        int populatonSize = 100;
+        state.ga = new GeneticAlgorithm(
+                rateOfMutation, populatonSize, state.maxTime, state.pIns
+        );
+        bh.consume(state.finalSolution = state.ga.getSolution());
+    }
+
+    @Benchmark
+    @Measurement(iterations = 5)
+    public void ga10x250Instances(Blackhole bh, I10x250State state) {
+        int rateOfMutation = 2;
+        int populatonSize = 100;
+        state.ga = new GeneticAlgorithm(
+                rateOfMutation, populatonSize, state.maxTime, state.pIns
+        );
+        bh.consume(state.finalSolution = state.ga.getSolution());
+    }
+
+    @Benchmark
+    @Measurement(iterations = 5)
+    public void sa10x100Instances(Blackhole bh, I10x100State state) {
+        Float initialTemp = 100f;
+        Float annealingFactor = 0.98f;
+        Float finalTemp = 0.00001f;
+        Integer roundsPerTemp = 150;
+        state.sa = new SimulatedAnnealing(
+                state.improvedSol, initialTemp, annealingFactor, finalTemp,
+                roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
+        );
+
+        bh.consume(state.finalSolution = state.sa.getSolution());
+    }
+
+    @Benchmark
+    @Measurement(iterations = 5)
+    public void sa10x250Instances(Blackhole bh, I10x250State state) {
+        Float initialTemp = 100f;
+        Float annealingFactor = 0.98f;
+        Float finalTemp = 0.00001f;
+        Integer roundsPerTemp = 150;
+        state.sa = new SimulatedAnnealing(
+                state.improvedSol, initialTemp, annealingFactor, finalTemp,
+                roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
+        );
+
+        bh.consume(state.finalSolution = state.sa.getSolution());
+    }
+
+    @Benchmark
+    @Measurement(iterations = 20)
+    public void gaF510x250Instances(Blackhole bh, F5I10x250State state) {
+        int rateOfMutation = 2;
+        int populatonSize = 100;
+        state.ga = new GeneticAlgorithm(
+                rateOfMutation, populatonSize, state.maxTime, state.pIns
+        );
+        bh.consume(state.finalSolution = state.ga.getSolution());
+    }
+
+    @Benchmark
+    @Measurement(iterations = 20)
+    public void saF510x250Instances(Blackhole bh, F5I10x250State state) {
+        Float initialTemp = 100f;
+        Float annealingFactor = 0.98f;
+        Float finalTemp = 0.00001f;
+        Integer roundsPerTemp = 150;
+        state.sa = new SimulatedAnnealing(
+                state.improvedSol, initialTemp, annealingFactor, finalTemp,
+                roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
+        );
+
+        bh.consume(state.finalSolution = state.sa.getSolution());
     }
 
     /**
