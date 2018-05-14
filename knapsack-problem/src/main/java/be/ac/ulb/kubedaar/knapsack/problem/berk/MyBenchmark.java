@@ -63,7 +63,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Fork(jvmArgs = "-Djmh.ignoreLock=true")
+@Fork(jvmArgs = {"-Djmh.ignoreLock=true"}, value = 1)
 public class MyBenchmark {
 
     private final static Long IMPROVEMENT_SEED = 4619L;
