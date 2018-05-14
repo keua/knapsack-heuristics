@@ -46,7 +46,7 @@ public class SimulatedAnnealing {
         this.a = a;
         this.e = e;
         this.m = m;
-        this.n = w.getItems();
+        this.n = this.w.getItems();
         this.rseed = rseed;
         this.generator = new Random(this.rseed);
         this.tmax = tmax * 1000; // seconds * 1000 ms/sec
@@ -62,14 +62,12 @@ public class SimulatedAnnealing {
         // Repeat
         long start = System.currentTimeMillis();
         long end = start + this.tmax.longValue(); // seconds * 1000 ms/sec
-        float originalT = this.t;
+        Float originalT = this.t;
         while (System.currentTimeMillis() < end) {
-            this.w = IncSolution.copy();
-            this.t = originalT;
-            //System.out.println("start again");
-            //System.out.println("Initial value: " + this.w.getValue());
+            System.out.println("start again");
+            System.out.println("Initial value: " + this.w.getValue());
             while (!(this.t < this.e)) {
-                //  Set repetition counter m = 0;
+                // Set repetition counter m = 0;
                 // Repeat
                 for (int mi = 0; mi < this.m; mi++) {
                     // Select an integer i from the set {1,2,...n} randomly;
@@ -92,7 +90,7 @@ public class SimulatedAnnealing {
                             // Let ∆ = f(ω') − f(ω);
                             Integer d = w1.getValue() - this.w.getValue();
                             // While ∆ ≥ 0 or Random (0, 1) < e^(∆/t), do ω ← ω';
-                            if (d >= 0 || Math.random() < Math.exp((d / t))) {
+                            if (d >= 0 || this.generator.nextFloat() < Math.exp((d / t))) {
                                 if (w1.isFeasibleSolution()) {
                                     this.w = w1.copy();
                                 }
@@ -102,11 +100,6 @@ public class SimulatedAnnealing {
                     } else {
                         // Drop item i, and pick up another item randomly, get new solution ω';
                         w1.removeItem(i);
-                        /*int itemToAdd;
-                    do {
-                        int rnd = this.generator.nextInt(w1.getNumDiscarded());
-                        itemToAdd = w1.getDiscarded()[rnd];
-                    } while (itemToAdd == i);*/
                         PriorityQueue<Map.Entry<Integer, Object>> tmpPqueue
                                 = new PriorityQueue<>(w1.sortNonInsertedList());
                         while (!tmpPqueue.isEmpty()) {
@@ -116,11 +109,10 @@ public class SimulatedAnnealing {
                                 w1.checkBeforeAddItem(itemToAdd);
                             }
                         }
-                        //w1.checkBeforeAddItem(itemToAdd);
                         // Let ∆ = f(ω') − f(ω);
                         Integer d = w1.getValue() - this.w.getValue();
                         // While ∆ ≥ 0 or Random (0, 1) < e^(∆/t), do ω ← ω';
-                        if (d >= 0 || Math.random() < Math.exp((d / this.t))) {
+                        if (d >= 0 || this.generator.nextFloat() < Math.exp((d / this.t))) {
                             this.w = w1.copy();
                         }
                     }
@@ -136,6 +128,8 @@ public class SimulatedAnnealing {
                 this.t = this.a * this.t;
             }
             // Until t < e.
+            this.w = IncSolution.copy();
+            this.t = originalT;
         }
         return IncSolution;
     }

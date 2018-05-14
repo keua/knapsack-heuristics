@@ -26,6 +26,7 @@ public class GeneticAlgorithm {
     Double tmax; // Max times
     LinkedList<Solution> population; // Solutions population
     ProblemInstance pIns; // Problem instance
+    Random rGenerator;
 
     public GeneticAlgorithm(ProblemInstance problemInstance) {
         this.numPool = 2;
@@ -35,13 +36,16 @@ public class GeneticAlgorithm {
         this.population = new LinkedList<>();
         this.pIns = problemInstance;
         this.rSeedArray = new Integer[this.initialPopulationSize];
-        Random rg = new Random();
+        this.rGenerator = new Random(1234L);
         for (int i = 0; i < this.initialPopulationSize; i++) {
-            this.rSeedArray[i] = rg.nextInt();
+            this.rSeedArray[i] = rGenerator.nextInt();
         }
     }
 
-    public GeneticAlgorithm(Integer rateOfMutation, Integer initialPopulationSize, Double tmax, ProblemInstance pIns) {
+    public GeneticAlgorithm(
+            Integer rateOfMutation, Integer initialPopulationSize,
+            Double tmax, ProblemInstance pIns, Long rSeed
+    ) {
         this.numPool = 2;
         this.rateOfMutation = rateOfMutation;
         this.initialPopulationSize = initialPopulationSize;
@@ -49,9 +53,9 @@ public class GeneticAlgorithm {
         this.tmax = tmax * 1000; // seconds * 1000 ms/sec
         this.pIns = pIns;
         this.rSeedArray = new Integer[this.initialPopulationSize];
-        Random rg = new Random();
+        this.rGenerator = new Random(rSeed);
         for (int i = 0; i < this.initialPopulationSize; i++) {
-            this.rSeedArray[i] = rg.nextInt();
+            this.rSeedArray[i] = rGenerator.nextInt();
         }
     }
 
@@ -87,6 +91,7 @@ public class GeneticAlgorithm {
             if (c.getValue() > bestSolution.getValue()) {
                 //16: S⁄ ˆ C;
                 bestSolution = c.copy();
+                System.out.println("new best value:" + bestSolution.getValue());
             }//17: end if =⁄ update best solution S⁄ found ⁄=
             //18: t ˆ t C 1;
         }
@@ -100,7 +105,7 @@ public class GeneticAlgorithm {
             this.population.add(
                     new FirstImprovement(
                             new RandomSolution(this.pIns, this.rSeedArray[i]).getFeasibleSolution(),
-                            74634L
+                            this.rSeedArray[i].longValue()
                     ).getImprovedSolution()
             );
         }
@@ -143,9 +148,9 @@ public class GeneticAlgorithm {
     }
 
     private LinkedList<Solution> tournament() {
-        LinkedList<Solution> shufflePop = new LinkedList<>(population);
+        LinkedList<Solution> shufflePop = new LinkedList<>(this.population);
         LinkedList<Solution> selection = new LinkedList<>();
-        Collections.shuffle(shufflePop);
+        Collections.shuffle(shufflePop, this.rGenerator);
         int ini = 0;
         int fin;
         for (int i = 0; i < this.numPool; i++) {
@@ -157,11 +162,10 @@ public class GeneticAlgorithm {
     }
 
     private Solution crossover(LinkedList<Solution> selection) {
-        Random rg = new Random();
         Solution nsol = selection.element().copy();
         for (int i = 0; i < this.pIns.getItems(); i++) {
             int selectedValue
-                    = (rg.nextBoolean())
+                    = (this.rGenerator.nextBoolean())
                     ? selection.get(0).getSolution()[i]
                     : selection.get(1).getSolution()[i];
             if (selectedValue == 1) {
@@ -176,9 +180,8 @@ public class GeneticAlgorithm {
     }
 
     private Solution mutate(Solution c) {
-        Random rg = new Random();
         for (int i = 0; i < this.rateOfMutation; i++) {
-            int flip = rg.nextInt(this.pIns.getItems());
+            int flip = this.rGenerator.nextInt(this.pIns.getItems());
             if (c.getSolution()[flip] == 1) {
                 c.removeItem(flip);
             } else {
@@ -190,7 +193,7 @@ public class GeneticAlgorithm {
 
     private Solution repair(Solution c) {
         LinkedList<Integer> inSolutionList = c.getSolutionList();
-        Collections.shuffle(inSolutionList);
+        Collections.shuffle(inSolutionList, this.rGenerator);
         c.checkViolatedConstraints();
         LinkedList<Integer> removed = new LinkedList();
         while (!c.isFeasibleSolution()) {

@@ -509,7 +509,8 @@ public class MyBenchmark {
         int rateOfMutation = 2;
         int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
-                rateOfMutation, populatonSize, state.maxTime, state.pIns
+                rateOfMutation, populatonSize,
+                state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
         );
         bh.consume(state.finalSolution = state.ga.getSolution());
     }
@@ -520,7 +521,8 @@ public class MyBenchmark {
         int rateOfMutation = 2;
         int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
-                rateOfMutation, populatonSize, state.maxTime, state.pIns
+                rateOfMutation, populatonSize,
+                state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
         );
         bh.consume(state.finalSolution = state.ga.getSolution());
     }
@@ -561,7 +563,8 @@ public class MyBenchmark {
         int rateOfMutation = 2;
         int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
-                rateOfMutation, populatonSize, state.maxTime, state.pIns
+                rateOfMutation, populatonSize,
+                state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
         );
         bh.consume(state.finalSolution = state.ga.getSolution());
     }

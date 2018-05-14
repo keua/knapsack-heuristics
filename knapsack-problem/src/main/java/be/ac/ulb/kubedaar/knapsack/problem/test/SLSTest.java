@@ -6,7 +6,6 @@
 package be.ac.ulb.kubedaar.knapsack.problem.test;
 
 import be.ac.ulb.kubedaar.knapsack.problem.impl.BestImprovement;
-import be.ac.ulb.kubedaar.knapsack.problem.impl.FirstImprovement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.GeneticAlgorithm;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.Improvement;
 import be.ac.ulb.kubedaar.knapsack.problem.impl.ProblemInstance;
@@ -25,7 +24,7 @@ public class SLSTest {
      */
     public static void main(String[] args) {
         //ProblemInstance i1 = ProblemInstance.readInstance("debug-instance.dat");
-        ProblemInstance i1 = ProblemInstance.readInstance("../instances/OR10x100-0.25_2.dat");
+        ProblemInstance i1 = ProblemInstance.readInstance("../instances/OR10x100-0.25_9.dat");
         i1.printProblemSummary();
         System.out.println("********** Random Soltuion **********");
         RandomSolution rs = new RandomSolution(i1, 12345L);
@@ -36,10 +35,10 @@ public class SLSTest {
         Solution nfirsol = rfi.getImprovedSolution();
         //nfirsol.printSolution();
         System.out.println("********** SA Random Soltuion **********");
-        SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.98f, 0.00001f, 150, 67465L, 100d);
+        SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.98f, 0.00001f, 200, 67465L, 100d);
         sar.getSolution().printSolution();
         System.out.println("********** GA Random Soltuion **********");
-        GeneticAlgorithm ga = new GeneticAlgorithm(2, 100, 100d, i1);
+        GeneticAlgorithm ga = new GeneticAlgorithm(2, 100, 100d, i1, 48658L);
         ga.getSolution().printSolution();
     }
 
