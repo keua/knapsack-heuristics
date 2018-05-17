@@ -64,8 +64,8 @@ public class SimulatedAnnealing {
         long end = start + this.tmax.longValue(); // seconds * 1000 ms/sec
         Float originalT = this.t;
         while (System.currentTimeMillis() < end) {
-            System.out.println("start again");
-            System.out.println("Initial value: " + this.w.getValue());
+            //System.out.println("start again");
+            //System.out.println("Initial value: " + this.w.getValue());
             while (!(this.t < this.e)) {
                 // Set repetition counter m = 0;
                 // Repeat

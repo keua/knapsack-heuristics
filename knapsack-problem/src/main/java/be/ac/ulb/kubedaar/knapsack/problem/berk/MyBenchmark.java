@@ -68,7 +68,7 @@ public class MyBenchmark {
 
     private final static Long IMPROVEMENT_SEED = 4619L;
     private final static Long RANDOM_SEEDS[] = {
-        7440L, 1437L,
+        7440L, 1437L, 7124L, 8923L, 5387L,
         1279L, 1263L, 1872L, 1252L, 1394L,
         1015L, 1009L, 3882L, 1130L, 4602L,
         1047L, 1353L, 2952L, 2177L, 1586L
@@ -385,18 +385,17 @@ public class MyBenchmark {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("ga")) {
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             } else if (method.contains("sa")) {
                 iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
                 improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             }
         }
 
         @TearDown(Level.Iteration)
         public void doTearDown(BenchmarkParams params) {
             System.out.println("Profit: " + finalSolution.getValue());
+            counter++;
         }
     }
 
@@ -435,18 +434,17 @@ public class MyBenchmark {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("ga")) {
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             } else if (method.contains("sa")) {
                 iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
                 improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             }
         }
 
         @TearDown(Level.Iteration)
         public void doTearDown(BenchmarkParams params) {
             System.out.println("Profit: " + finalSolution.getValue());
+            counter++;
         }
     }
 
@@ -488,18 +486,17 @@ public class MyBenchmark {
             String method = params.getBenchmark().toLowerCase();
             if (method.contains("ga")) {
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             } else if (method.contains("sa")) {
                 iniSol = new RandomSolution(pIns, RANDOM_SEEDS[counter]).getFeasibleSolution();
                 improvedSol = new BestImprovement(iniSol, RANDOM_SEEDS[counter]).getImprovedSolution();
                 System.out.println("RS: " + RANDOM_SEEDS[counter]);
-                counter++;
             }
         }
 
         @TearDown(Level.Iteration)
         public void doTearDown(BenchmarkParams params) {
             System.out.println("Profit: " + finalSolution.getValue());
+            counter++;
         }
     }
 
@@ -507,7 +504,7 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void ga10x100Instances(Blackhole bh, I10x100State state) {
         int rateOfMutation = 2;
-        int populatonSize = 100;
+        int populatonSize = 50;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -519,7 +516,7 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void ga10x250Instances(Blackhole bh, I10x250State state) {
         int rateOfMutation = 2;
-        int populatonSize = 100;
+        int populatonSize = 50;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -531,9 +528,9 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void sa10x100Instances(Blackhole bh, I10x100State state) {
         Float initialTemp = 100f;
-        Float annealingFactor = 0.98f;
+        Float annealingFactor = 0.845f;
         Float finalTemp = 0.00001f;
-        Integer roundsPerTemp = 150;
+        Integer roundsPerTemp = state.pIns.getKnapsacks();
         state.sa = new SimulatedAnnealing(
                 state.improvedSol, initialTemp, annealingFactor, finalTemp,
                 roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
@@ -546,9 +543,9 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void sa10x250Instances(Blackhole bh, I10x250State state) {
         Float initialTemp = 100f;
-        Float annealingFactor = 0.98f;
+        Float annealingFactor = 0.845f;
         Float finalTemp = 0.00001f;
-        Integer roundsPerTemp = 150;
+        Integer roundsPerTemp = state.pIns.getKnapsacks();
         state.sa = new SimulatedAnnealing(
                 state.improvedSol, initialTemp, annealingFactor, finalTemp,
                 roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
@@ -561,7 +558,7 @@ public class MyBenchmark {
     @Measurement(iterations = 20)
     public void gaF510x250Instances(Blackhole bh, F5I10x250State state) {
         int rateOfMutation = 2;
-        int populatonSize = 100;
+        int populatonSize = 50;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -573,9 +570,9 @@ public class MyBenchmark {
     @Measurement(iterations = 20)
     public void saF510x250Instances(Blackhole bh, F5I10x250State state) {
         Float initialTemp = 100f;
-        Float annealingFactor = 0.98f;
+        Float annealingFactor = 0.845f;
         Float finalTemp = 0.00001f;
-        Integer roundsPerTemp = 150;
+        Integer roundsPerTemp = state.pIns.getKnapsacks();
         state.sa = new SimulatedAnnealing(
                 state.improvedSol, initialTemp, annealingFactor, finalTemp,
                 roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime

@@ -24,7 +24,7 @@ public class SLSTest {
      */
     public static void main(String[] args) {
         //ProblemInstance i1 = ProblemInstance.readInstance("debug-instance.dat");
-        ProblemInstance i1 = ProblemInstance.readInstance("../instances/OR10x100-0.25_9.dat");
+        ProblemInstance i1 = ProblemInstance.readInstance("../instances/OR10x250-0.25_9.dat");
         i1.printProblemSummary();
         System.out.println("********** Random Soltuion **********");
         RandomSolution rs = new RandomSolution(i1, 12345L);
@@ -34,11 +34,11 @@ public class SLSTest {
         Improvement rfi = new BestImprovement(rs);
         Solution nfirsol = rfi.getImprovedSolution();
         //nfirsol.printSolution();
-        System.out.println("********** SA Random Soltuion **********");
-        SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.98f, 0.00001f, 200, 67465L, 100d);
-        sar.getSolution().printSolution();
+        /*System.out.println("********** SA Random Soltuion **********");
+        SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.845f, 0.00001f, 250, 7440L, 250d);//85
+        sar.getSolution().printSolution();*/
         System.out.println("********** GA Random Soltuion **********");
-        GeneticAlgorithm ga = new GeneticAlgorithm(2, 100, 100d, i1, 48658L);
+        GeneticAlgorithm ga = new GeneticAlgorithm(2, 75, 250d, i1, 7440L);
         ga.getSolution().printSolution();
     }
 

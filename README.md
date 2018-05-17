@@ -101,11 +101,11 @@ go to the runnable folder (`cd runnable`) and execute the following commands:
  ```
 #### 10x250 Instances 
 ```bash
- java -jar benchmarks.jar sa10x250Instances -rff jmh-sa10x100Instances.csv -rf csv -wi 0 -f 1 | tee sa10x250Instances.log
+ java -jar benchmarks.jar sa10x250Instances -rff jmh-sa10x250Instances.csv -rf csv -wi 0 -f 1 | tee sa10x250Instances.log
  ```
 #### first 5 10x250 Instances
 ```bash
- java -jar benchmarks.jar saF510x250Instances -rff jmh-sa10x100Instances.csv -rf csv -wi 0 -f 1 | tee saF510x250Instances.log
+ java -jar benchmarks.jar saF510x250Instances -rff jmh-saF510x250Instances.csv -rf csv -wi 0 -f 1 | tee saF510x250Instances.log
  ```
 
 ### Genetic Algorithm (population-based SLS method)
