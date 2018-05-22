@@ -70,7 +70,6 @@ public class GeneticAlgorithm {
         long start = System.currentTimeMillis();
         long end = start + this.tmax.longValue(); // seconds * 1000 ms/sec
         while (System.currentTimeMillis() < end) {
-            //for (int i = 0; i < this.tmax; i++) {
             Solution c;
             do {
                 //6: select fP1; P2g :D 8.P.t//I =⁄ 8 D binary tournament selection ⁄=
@@ -91,7 +90,6 @@ public class GeneticAlgorithm {
             if (c.getValue() > bestSolution.getValue()) {
                 //16: S⁄ ˆ C;
                 bestSolution = c.copy();
-                //System.out.println("new best value:" + bestSolution.getValue());
             }//17: end if =⁄ update best solution S⁄ found ⁄=
             //18: t ˆ t C 1;
         }
@@ -195,9 +193,11 @@ public class GeneticAlgorithm {
         LinkedList<Integer> inSolutionList = c.getSolutionList();
         Collections.shuffle(inSolutionList, this.rGenerator);
         c.checkViolatedConstraints();
+        LinkedList<Integer> removed = new LinkedList();
         while (!c.isFeasibleSolution()) {
             int itemToRemove = inSolutionList.poll();
             c.removeItem(itemToRemove);
+            removed.add(itemToRemove);
             c.checkViolatedConstraints();
         }
         PriorityQueue<Map.Entry<Integer, Object>> tmpPqueue
@@ -205,7 +205,9 @@ public class GeneticAlgorithm {
         while (!tmpPqueue.isEmpty()) {
             // check feasibility 
             int itemToAdd = tmpPqueue.poll().getKey();
+            if (!removed.stream().anyMatch(x -> x == itemToAdd)) {
                 c.checkBeforeAddItem(itemToAdd);
+            }
         }
         return c;
     }

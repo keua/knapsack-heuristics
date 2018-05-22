@@ -1,0 +1,133 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+Table5	30	2	5/20/2018 6:06:48 PM
+geometry	0	0	522	201	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	0.33	0.71
+1	0.31	0.94
+2	0.3	0.67
+3	0.52	1
+4	0.56	1.02
+5	0.45	0.86
+6	0.33	1.05
+7	0.52	0.73
+8	0.26	0.69
+9	0.38	0.87
+10	0.18	0.45
+11	0.21	0.51
+12	0.17	0.34
+13	0.16	0.27
+14	0.17	0.52
+15	0.18	0.55
+16	0.15	0.6
+17	0.18	0.48
+18	0.15	0.54
+19	0.16	0.5
+20	0.06	0.16
+21	0.06	0.14
+22	0.09	0.21
+23	0.07	0.19
+24	0.07	0.18
+25	0.09	0.2
+26	0.09	0.23
+27	0.07	0.21
+28	0.07	0.26
+29	0.07	0.16
+</data>
+</table>
+<multiLayer>
+Graph6	1	1	5/20/2018 6:07:37 PM
+geometry	522	0	480	431	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	454	362
+<PageGeometry>0.0107759	0.0132626	0.978448	0.960212</PageGeometry>
+PlotTitle	Correlation between average relative solutions quality for SA and GA	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Average relative solution quality SA [%]	Average relative solution quality GA [%]		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table5_1	Table5_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0.06	0.56</Range>
+<Points>2</Points>
+<Constant>A	1.7482441978314</Constant>
+<Constant>B	0.13445848973002</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1.2	0	7	5	0	0
+scale	1	0	1.2	0	7	5	0	0
+scale	2	0	0.6	0	7	5	0	0
+scale	3	0	0.6	0	7	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>

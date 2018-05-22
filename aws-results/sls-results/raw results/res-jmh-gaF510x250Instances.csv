@@ -1,0 +1,16 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit","Param: aResourcesXitem","Param: bDifficulty","Param: cSample","Param: timeFactor"
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,3783.379364,127.188889,"ms/op",OR10x250-,0.25,_1,0.01
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,26291.205425,131.805707,"ms/op",OR10x250-,0.25,_1,0.1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,251297.770737,125.816907,"ms/op",OR10x250-,0.25,_1,1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,3698.425130,144.100387,"ms/op",OR10x250-,0.25,_2,0.01
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,26162.075678,131.665389,"ms/op",OR10x250-,0.25,_2,0.1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,251143.799504,127.558897,"ms/op",OR10x250-,0.25,_2,1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,3731.701253,116.940807,"ms/op",OR10x250-,0.25,_3,0.01
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,26232.336611,107.940144,"ms/op",OR10x250-,0.25,_3,0.1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,251241.447456,117.535990,"ms/op",OR10x250-,0.25,_3,1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,3823.108216,156.113065,"ms/op",OR10x250-,0.25,_4,0.01
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,26318.474846,157.832158,"ms/op",OR10x250-,0.25,_4,0.1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,251341.956832,153.108775,"ms/op",OR10x250-,0.25,_4,1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,3717.704344,117.885987,"ms/op",OR10x250-,0.25,_5,0.01
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,26201.874597,118.761646,"ms/op",OR10x250-,0.25,_5,0.1
+"be.ac.ulb.kubedaar.knapsack.problem.berk.MyBenchmark.gaF510x250Instances","avgt",1,20,251143.808983,210.606588,"ms/op",OR10x250-,0.25,_5,1

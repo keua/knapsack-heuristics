@@ -1,0 +1,1195 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	13
+<table>
+Table1	100	4	5/20/2018 2:06:46 PM
+geometry	588	389	488	288	minimized	
+header	1[X]	2[Y]	3[Y]	4[Y]
+ColWidth	100	103	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	2.05	0.41	0.41	
+1	2.05	0.94	0.21	
+2	1.26	0.97	0.21	
+3	1.24	0.41	0.19	
+4	1.84	1.11	0.56	
+5	1.67	0.41	0.32	
+6	1.77	0.55	0.27	
+7	1.61	0.61	0.08	
+8	1.3	0.74	0.29	
+9	1.66	0.74	0.29	
+10	1.35	0.79	0.45	
+11	1.62	0.84	0.45	
+12	1.95	0.94	0.68	
+13	1.51	0.76	0.31	
+14	2.04	0.95	0.22	
+15	1.86	0.73	0.4	
+16	0.63	0.48	0.32	
+17	1.23	0.56	0.47	
+18	1.28	0.8	0.49	
+19	0.83	0.63	0.22	
+20	1.21	0.43	0.28	
+21	1.49	0.78	0.28	
+22	1.96	0.7	0.53	
+23	2.18	0.58	0.18	
+24	1.61	0.52	0.28	
+25	1.19	0.61	0.31	
+26	2.07	0.66	0.29	
+27	1.5	1.24	0.34	
+28	1.31	0.83	0.45	
+29	1.28	0.58	0.29	
+30	1.3	1	0.44	
+31	0.86	0.56	0.28	
+32	2.11	0.76	0.19	
+33	1.55	0.86	0.45	
+34	1.18	0.74	0.38	
+35	1.45	0.65	0.38	
+36	1.83	0.8	0.26	
+37	1.55	0.76	0.57	
+38	1.38	0.67	0.32	
+39	1.92	0.79	0.57	
+40	1.5	0.82	0.34	
+41	1.49	0.76	0.26	
+42	1.39	0.81	0.2	
+43	1.4	0.69	0.43	
+44	1.72	0.56	0.27	
+45	0.94	0.69	0.67	
+46	1.28	0.29	0.26	
+47	0.65	0.17	0.17	
+48	1.46	0.47	0.16	
+49	1.52	0.82	0.33	
+50	0.97	0.66	0.3	
+51	1.3	0.45	0.35	
+52	1.34	0.61	0.19	
+53	0.55	0.55	0.39	
+54	1.7	0.94	0.19	
+55	1.22	0.55	0.18	
+56	1.16	0.61	0.34	
+57	2.06	0.66	0.3	
+58	1.6	0.46	0.33	
+59	1.69	0.94	0.48	
+60	1.07	0.78	0.62	
+61	0.96	0.71	0.42	
+62	1.18	0.74	0.43	
+63	1.12	0.82	0.59	
+64	1.53	0.71	0.52	
+65	1.8	1.07	0.16	
+66	1.07	0.84	0.37	
+67	1.32	0.42	0.42	
+68	1.06	0.59	0.14	
+69	1.83	1.01	0.39	
+70	1.32	0.85	0.73	
+71	1.48	0.74	0.34	
+72	1.41	0.74	0.38	
+73	1	0.76	0.36	
+74	2.08	1.02	0.36	
+75	1.25	0.46	0.21	
+76	1.23	0.68	0.68	
+77	2.08	0.79	0.52	
+78	1.28	0.52	0.34	
+79	2.17	0.66	0.54	
+80	1.79	1.16	0.36	
+81	1.43	1.19	0.65	
+82	1.65	1.04	0.65	
+83	1.94	1.09	0.39	
+84	1.37	0.84	0.73	
+85	1.21	0.67	0.54	
+86	0.72	0.62	0.46	
+87	1.89	1.11	0.74	
+88	1.66	1.36	0.54	
+89	1.14	1.05	1.02	
+90	1.33	0.43	0.43	
+91	1.49	0.95	0.59	
+92	1.98	0.98	0.35	
+93	1.34	0.94	0.75	
+94	2.21	0.67	0.54	
+95	1.11	1.06	0.54	
+96	1.56	0.93	0.59	
+97	1.74	1.02	0.43	
+98	2.21	1.08	0.54	
+99	1.89	0.93	0.87	
+</data>
+</table>
+<multiLayer>
+Graph1	2	1	5/20/2018 2:20:49 PM
+geometry	729	-16	1014	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	469	390
+<PageGeometry>0.0104384	0.0123457	0.979123	0.962963</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+scale	0	0	5	0	6	5	0	0
+scale	1	0	6	0	7	5	0	0
+scale	2	-50	200	0	6	5	0	0
+scale	3	-50	200	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-43.734335839599</x>
+<y>5.7993311036789</y>
+<right>18.2957393483709</right>
+<bottom>5.21739130434783</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+
+</Text>
+<Font>MS Shell Dlg 2	8	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<graph>
+ggeometry	479	5	514	391
+<PageGeometry>1	0.0123457	1.07307	0.965432</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+scale	0	0	1000	0	6	5	0	0
+scale	1	0	1000	0	6	5	0	0
+scale	2	0	1000	0	6	5	0	0
+scale	3	0	1000	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table2	30	4	5/20/2018 4:07:41 PM
+geometry	0	389	476	287	minimized	
+header	Relative solution quality[X]	max-time * 0.01[Y]	max-time * 0.1[Y]	max-time[Y]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	0.2	0	0	0
+1	0.6	0	0.05	0.38
+2	1	0.02	0.36	0.77
+3	1.4	0.18	0.8	0.95
+4	1.8	0.46	0.96	0.99
+5	2.2	0.81	1	1
+6	2.6	0.94	1	1
+7	3	0.98	1	1
+8	3.4	1	1	1
+9	3.8	1	1	1
+</data>
+</table>
+<multiLayer>
+Graph3	1	1	5/20/2018 4:38:01 PM
+geometry	705	32	553	459	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	527	390
+<PageGeometry>0.00931099	0.0123457	0.981378	0.962963</PageGeometry>
+PlotTitle	SA Solution quality distributions for various run-times 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Relative solution quality [%]	Cumulative frequency		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table2_Relative solution quality	Table2_max-time	0	1	#000000	0	2	7	0	#000000	#000000	0	#000000	14	1	2	0	0	9	1
+curve	Table2_Relative solution quality	Table2_max-time * 0.1	0	1	#000000	1	2	7	0	#ff0000	#ff0000	0	#000000	14	1	2	0	0	9	1
+curve	Table2_Relative solution quality	Table2_max-time * 0.01	0	1	#000000	2	2	7	0	#00ff00	#00ff00	0	#000000	14	1	2	0	0	9	1
+scale	0	0	1	0	6	0	0	0
+scale	1	0	1	0	6	0	0	0
+scale	2	0	4	0	9	0	0	0
+scale	3	0	4	0	9	0	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.61</x>
+<y>0.35779816513761</y>
+<right>4.02</right>
+<bottom>0.204892966360856</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+</Text>
+<Font>MS Shell Dlg 2	8	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table3	30	4	5/20/2018 4:58:15 PM
+geometry	196	389	555	289	minimized	
+header	Relative solution quality[X]	max-time * 0.01[Y]	max-time * 0.1[Y]	max-time[Y]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	0.2	0	0.02	0.56
+1	0.6	0.04	0.61	0.98
+2	1	0.2	0.98	1
+3	1.4	0.62	1	1
+4	1.8	0.88	1	1
+5	2.2	1	1	1
+6	2.6	1	1	1
+7	3	1	1	1
+8	3.4	1	1	1
+9	3.8	1	1	1
+</data>
+</table>
+<multiLayer>
+Graph4	1	1	5/20/2018 5:02:20 PM
+geometry	295	39	523	451	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	8	4	497	382
+<PageGeometry>0.0157791	0.0100756	0.980276	0.962217</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table3_Relative solution quality	Table3_max-time	0	1	#000000	0	2	7	0	#000000	#000000	0	#000000	14	1	2	0	0	9	1
+curve	Table3_Relative solution quality	Table3_max-time * 0.1	0	1	#000000	1	2	7	0	#ff0000	#ff0000	0	#000000	14	1	2	0	0	9	1
+curve	Table3_Relative solution quality	Table3_max-time * 0.01	0	1	#000000	2	2	7	0	#00ff00	#00ff00	0	#000000	14	1	2	0	0	9	1
+scale	0	-0.2	1.2	0	8	5	0	0
+scale	1	-0.2	1.2	0	8	5	0	0
+scale	2	0	4	0	9	5	0	0
+scale	3	0	4	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.7759036144578</x>
+<y>0.38795986622074</y>
+<right>4.30481927710843</right>
+<bottom>0.220735785953177</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+</Text>
+<Font>MS Shell Dlg 2	8	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph5	1	1	5/20/2018 5:11:22 PM
+geometry	172	-96	515	455	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	489	386
+<PageGeometry>0.01002	0.0124688	0.97996	0.962594</PageGeometry>
+PlotTitle	GA Solution quality distributions for various run-times 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Relative solution quality [%]	Cumulative frequency		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	9	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	9	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	9	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	9	75	0	0	0
+AxisFont0	MS Shell Dlg 2	9	50	0	0	0
+AxisFont1	MS Shell Dlg 2	9	50	0	0	0
+AxisFont2	MS Shell Dlg 2	9	50	0	0	0
+AxisFont3	MS Shell Dlg 2	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table3_Relative solution quality	Table3_max-time	0	1	#000000	0	2	7	0	#000000	#000000	0	#000000	14	1	2	0	0	9	1
+curve	Table3_Relative solution quality	Table3_max-time * 0.1	0	1	#000000	1	2	7	0	#ff0000	#ff0000	0	#000000	14	1	2	0	0	9	1
+curve	Table3_Relative solution quality	Table3_max-time * 0.01	0	1	#000000,0.900008	2	2	7	0	#00ff00	#00ff00	0	#000000	14	1	2	0	0	9	1
+scale	0	0	1	0	6	5	0	0
+scale	1	0	1	0	6	5	0	0
+scale	2	0	4	0	9	5	0	0
+scale	3	0	4	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.1729323308271</x>
+<y>20.267558528428</y>
+<right>1.8796992481203</right>
+<bottom>-3.1438127090301</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+</Text>
+<Font>MS Shell Dlg 2	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.5671140939597</x>
+<y>0.36222910216718</y>
+<right>3.98657718120805</right>
+<bottom>0.207430340557276</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+</Text>
+<Font>MS Shell Dlg 2	8	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table4	30	7	5/20/2018 5:40:36 PM
+geometry	392	389	1038	220	minimized	
+header	1[X]	SA ( max-time * 0.001)[Y]	SA ( max-time * 0.01)[Y]	SA ( max-time )[Y]	GA ( max-time * 0.001)[Y]	GA ( max-time * 0.01)[Y]	GA ( max-time )[Y]
+ColWidth	100	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel		2
+<data>
+0	0.2	0	0	0	0	0.02	0.56
+1	0.6	0	0.05	0.38	0.04	0.61	0.98
+2	1	0.02	0.36	0.77	0.2	0.98	1
+3	1.4	0.18	0.8	0.95	0.62	1	1
+4	1.8	0.46	0.96	0.99	0.88	1	1
+5	2.2	0.81	1	1	1	1	1
+6	2.6	0.94	1	1	1	1	1
+7	3	0.98	1	1	1	1	1
+8	3.4	1	1	1	1	1	1
+9	3.8	1	1	1	1	1	1
+</data>
+</table>
+<multiLayer>
+Graph7	1	1	5/20/2018 5:59:00 PM
+geometry	353	106	488	431	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	462	362
+<PageGeometry>0.0105932	0.0132626	0.978814	0.960212</PageGeometry>
+PlotTitle	GA vs SA Solution quality distributions for various run-times 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Relative solution quality [%]	Cumulative frequency		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table4_1	Table4_GA ( max-time )	0	1	#000000	0	2	7	0	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table4_1	Table4_GA ( max-time * 0.01)	0	1	#000000	1	2	7	0	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+curve	Table4_1	Table4_GA ( max-time * 0.001)	0	1	#000000	2	2	7	0	#00ff00	#00ff00	0	#000000	14	1	2	0	0	29	1
+curve	Table4_1	Table4_SA ( max-time )	0	1	#c0c0c0	0	2	7	0	#0000ff	#0000ff	0	#000000	14	1	2	0	0	29	1
+curve	Table4_1	Table4_SA ( max-time * 0.01)	0	1	#c0c0c0	1	2	7	0	#00ffff	#00ffff	0	#000000	14	1	2	0	0	29	1
+curve	Table4_1	Table4_SA ( max-time * 0.001)	0	1	#c0c0c0	2	2	7	0	#ff00ff	#ff00ff	0	#000000	14	1	2	0	0	29	1
+scale	0	0	1	0	6	5	0	0
+scale	1	0	1	0	6	5	0	0
+scale	2	0	4	0	9	5	0	0
+scale	3	0	4	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.02457002457</x>
+<y>0.39464882943144</y>
+<right>3.74447174447174</right>
+<bottom>0.096989966555184</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+\l(4)%(4)
+\l(5)%(5)
+\l(6)%(6)
+</Text>
+<Font>MS Shell Dlg 2	8	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table5	30	2	5/20/2018 6:06:48 PM
+geometry	784	389	316	201	minimized	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	0.33	0.71
+1	0.31	0.94
+2	0.3	0.67
+3	0.52	1
+4	0.56	1.02
+5	0.45	0.86
+6	0.33	1.05
+7	0.52	0.73
+8	0.26	0.69
+9	0.38	0.87
+10	0.18	0.45
+11	0.21	0.51
+12	0.17	0.34
+13	0.16	0.27
+14	0.17	0.52
+15	0.18	0.55
+16	0.15	0.6
+17	0.18	0.48
+18	0.15	0.54
+19	0.16	0.5
+20	0.06	0.16
+21	0.06	0.14
+22	0.09	0.21
+23	0.07	0.19
+24	0.07	0.18
+25	0.09	0.2
+26	0.09	0.23
+27	0.07	0.21
+28	0.07	0.26
+29	0.07	0.16
+</data>
+</table>
+<multiLayer>
+Graph6	1	1	5/20/2018 6:07:37 PM
+geometry	523	-96	479	431	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	453	362
+<PageGeometry>0.0107991	0.0132626	0.978402	0.960212</PageGeometry>
+PlotTitle	Correlation between average relative solutions quality for SA and GA	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Average relative solution quality SA [%]	Average relative solution quality GA [%]		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table5_1	Table5_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0.06	0.56</Range>
+<Points>2</Points>
+<Constant>A	1.7482441978314</Constant>
+<Constant>B	0.13445848973002</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1.2	0	7	5	0	0
+scale	1	0	1.2	0	7	5	0	0
+scale	2	0	0.6	0	7	5	0	0
+scale	3	0	0.6	0	7	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table6	30	2	5/20/2018 6:19:41 PM
+geometry	980	389	445	220	minimized	active
+header	Average relative solution quality GA [%][X]	Average relative solution quality SA [%][Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	0.03	0.3
+1	0.22	0.63
+2	0.18	0.52
+3	0.08	0.65
+4	0.25	0.71
+5	0.27	0.79
+6	0.27	0.56
+7	0.23	0.85
+8	0.24	0.89
+9	0	0.56
+10	0.04	0.27
+11	0.03	0.35
+12	0.19	0.19
+13	0.15	0.4
+14	0.11	0.32
+15	0.08	0.31
+16	0.05	0.2
+17	0.1	0.15
+18	0	0.12
+19	0.2	0.32
+20	0	0.04
+21	0.09	0.08
+22	0.01	0.09
+23	0.02	0.12
+24	0	0
+25	0.16	0.27
+26	0.03	0.08
+27	0.09	0.1
+28	0.02	0.19
+29	0	0.02
+</data>
+</table>
+<multiLayer>
+Graph8	1	1	5/20/2018 6:20:39 PM
+geometry	787	-104	488	431	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	462	362
+<PageGeometry>0.0105932	0.0132626	0.978814	0.960212</PageGeometry>
+PlotTitle	Correlation between average relative solutions quality for SA and GA	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#c0c0c0	1	0.5	#a0a0a4	2	0.4	#c0c0c0	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Average relative solution quality SA [%]	Average relative solution quality GA [%]		 	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+InvertedTitle	0	0	0	0
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table6_Average relative solution quality GA [%]	Table6_Average relative solution quality SA [%]	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	0.27</Range>
+<Points>2</Points>
+<Constant>A	2.06563057859918</Constant>
+<Constant>B	0.119797332773286</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-0.2	1	0	7	5	0	0
+scale	1	-0.2	1	0	7	5	0	0
+scale	2	-0.05	0.3	0	8	5	0	0
+scale	3	-0.05	0.3	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	0	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[5/20/2018 2:07:43 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0075247524752
+Standard Deviation = 0.5285213447735
+Median = 2.0300000000000
+Size = 101
+--------------------------------------------------------------------------------------
+[5/20/2018 2:19:09 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0276000000000
+Standard Deviation = 0.4909589050671
+Median = 2.0400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:08:04 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0276000000000
+Standard Deviation = 0.4909589050671
+Median = 2.0400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:08:58 PM "Table1"]
+Statistics on Table1_2:
+Mean = 1.3137000000000
+Standard Deviation = 0.3672382734615
+Median = 1.2750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:09:46 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.9482000000000
+Standard Deviation = 0.3434153476624
+Median = 0.8550000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:55:33 PM "Table1"]
+Statistics on Table1_1:
+Mean = 1.4852000000000
+Standard Deviation = 0.3815028231094
+Median = 1.4700000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:56:13 PM "Table1"]
+Statistics on Table1_2:
+Mean = 0.7543000000000
+Standard Deviation = 0.2211003474361
+Median = 0.7400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 4:57:55 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.4028000000000
+Standard Deviation = 0.1733804131866
+Median = 0.3750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:08:47 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.4028000000000
+Standard Deviation = 0.1733804131866
+Median = 0.3750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:09:26 PM "Table1"]
+Statistics on Table1_2:
+Mean = 0.7543000000000
+Standard Deviation = 0.2211003474361
+Median = 0.7400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:10:25 PM "Table1"]
+Statistics on Table1_1:
+Mean = 1.4852000000000
+Standard Deviation = 0.3815028231094
+Median = 1.4700000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:25:42 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0276000000000
+Standard Deviation = 0.4909589050671
+Median = 2.0400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:27:51 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0276000000000
+Standard Deviation = 0.4909589050671
+Median = 2.0400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:30:28 PM "Table1"]
+Statistics on Table1_2:
+Mean = 1.3137000000000
+Standard Deviation = 0.3672382734615
+Median = 1.2750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:31:05 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.9482000000000
+Standard Deviation = 0.3434153476624
+Median = 0.8550000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:33:48 PM "Table1"]
+Statistics on Table1_1:
+Mean = 1.4852000000000
+Standard Deviation = 0.3815028231094
+Median = 1.4700000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:34:07 PM "Table1"]
+Statistics on Table1_2:
+Mean = 0.7543000000000
+Standard Deviation = 0.2211003474361
+Median = 0.7400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:34:30 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.4028000000000
+Standard Deviation = 0.1733804131866
+Median = 0.3750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:49:57 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.4028000000000
+Standard Deviation = 0.1733804131866
+Median = 0.3750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:50:26 PM "Table1"]
+Statistics on Table1_1:
+Mean = 2.0276000000000
+Standard Deviation = 0.4909589050671
+Median = 2.0400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:51:27 PM "Table1"]
+Statistics on Table1_2:
+Mean = 1.3137000000000
+Standard Deviation = 0.3672382734615
+Median = 1.2750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:51:57 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.9482000000000
+Standard Deviation = 0.3434153476624
+Median = 0.8550000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:52:39 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.9482000000000
+Standard Deviation = 0.3434153476624
+Median = 0.8550000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:53:16 PM "Table1"]
+Statistics on Table1_1:
+Mean = 1.4852000000000
+Standard Deviation = 0.3815028231094
+Median = 1.4700000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:53:32 PM "Table1"]
+Statistics on Table1_2:
+Mean = 0.7543000000000
+Standard Deviation = 0.2211003474361
+Median = 0.7400000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 5:53:51 PM "Table1"]
+Statistics on Table1_3:
+Mean = 0.4028000000000
+Standard Deviation = 0.1733804131866
+Median = 0.3750000000000
+Size = 100
+--------------------------------------------------------------------------------------
+[5/20/2018 6:08:26 PM	Plot: ''Graph6'']
+Linear Regression of dataset: Table5_2, using function: A*x+B
+Weighting Method: No weighting
+From x = 3.300000000000000e-01 to x = 7.000000000000001e-02
+B (y-intercept) = 1.344584897300216e-01 +/- 4.233066472663462e-02
+A (slope) = 1.748244197831412e+00 +/- 1.629670234181864e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1.738228656990505e-02
+R^2 = 0.804307049247575
+Adjusted R^2 = 0.789811275117766
+RMSE (Root Mean Squared Error) = 0.131841899902516
+RSS (Residual Sum of Squares) = 0.486704023957341
+---------------------------------------------------------------------------------------
+[5/20/2018 6:20:54 PM	Plot: ''Graph8'']
+Linear Regression of dataset: Table6_Average relative solution quality SA [%], using function: A*x+B
+Weighting Method: No weighting
+From x = 3.000000000000000e-02 to x = 0.000000000000000e+00
+B (y-intercept) = 1.197973327732857e-01 +/- 4.971553388642491e-02
+A (slope) = 2.065630578599181e+00 +/- 3.567528857686172e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3.232045798892906e-02
+R^2 = 0.544901321741791
+Adjusted R^2 = 0.511190308537479
+RMSE (Root Mean Squared Error) = 0.179778914194432
+RSS (Residual Sum of Squares) = 0.904972823690014
+---------------------------------------------------------------------------------------
+</log>

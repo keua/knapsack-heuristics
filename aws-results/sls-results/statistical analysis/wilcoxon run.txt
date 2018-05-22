@@ -1,0 +1,16 @@
+file.name <- "wilcoxon-10x100-saga-deviation.txt"
+
+all.data <- read.table(file=file.name, header=TRUE, sep=":") #Replace the separator for any of your preference
+
+print(all.data$heuristic)
+
+pairwise.wilcox.test(all.data$deviation,all.data$heuristic,p.adj = "bonf", pool.sd=F, paired=F)
+
+# time
+file.name <- "wilcoxon-10x250-saga-deviation.txt"
+
+all.data <- read.table(file=file.name, header=TRUE, sep=":") #Replace the separator for any of your preference
+
+print(all.data$heuristic)
+
+pairwise.wilcox.test(all.data$deviation,all.data$heuristic,p.adj = "bonf", pool.sd=F, paired=F)

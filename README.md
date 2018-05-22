@@ -49,14 +49,35 @@ java -jar mkp.jar -f="instances/xxxxx.dat"
                   -s=1234 
                   -imp=bi|fi|vnd 
                   -is=1236
+                  -sls=ga|sa
+                  -maxtime=100.00
+                  -slsseed=1234
+                  -gamr=2
+                  -gaps=50
+                  -sait=100.00
+                  -saft=0.00001
+                  -sadf=0.845
+                  -sarpt=10
  ```
 > `-f` means the file with the instances  
 > `-ch` the constructive heuristic you want execute  
 > `-s` the random seed you want to test for the radom ch  
 > `-imp` the improvement you want to test with the ch as initial solution  
 > `-is`  the random seed you want to use in the shuffle pashe of the improvement  
+> `-sls` ga for the Genetic algoirthm and sa for the simmulated annealing  
+> `-max` the maximum amount of time to run the SLS  
+> `-sls` the seed used to the random parts in the SLS methods  
+> `-gamr` mutation rate for the GA  
+> `-gap` population size for the GA  
+> `-sai` initial temprature for the SA  
+> `-saf` final temperature for the SA  
+> `-sad` temperature control for the SA  
+> `-sar` rounds per temperature for the SA  
 
-
+for example to run the SA with a random inital solution you can run:
+```
+java -jar mkp.jar -f="../instances/OR10x250-0.75_1.dat" -ch="random" -is=46193 -sls="sa" -maxtime=100 -slsseed=4567
+```
 
 ## Benchmarking
 

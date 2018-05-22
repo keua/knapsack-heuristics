@@ -1,0 +1,28 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	1
+<table>
+Table4	30	7	5/20/2018 5:40:36 PM
+geometry	91	253	1038	220	active
+header	1[X]	SA ( max-time * 0.001)[Y]	SA ( max-time * 0.01)[Y]	SA ( max-time )[Y]	GA ( max-time * 0.001)[Y]	GA ( max-time * 0.01)[Y]	GA ( max-time )[Y]
+ColWidth	100	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel		2
+<data>
+0	0.2	0	0	0	0	0.02	0.56
+1	0.6	0	0.05	0.38	0.04	0.61	0.98
+2	1	0.02	0.36	0.77	0.2	0.98	1
+3	1.4	0.18	0.8	0.95	0.62	1	1
+4	1.8	0.46	0.96	0.99	0.88	1	1
+5	2.2	0.81	1	1	1	1	1
+6	2.6	0.94	1	1	1	1	1
+7	3	0.98	1	1	1	1	1
+8	3.4	1	1	1	1	1	1
+9	3.8	1	1	1	1	1	1
+</data>
+</table>

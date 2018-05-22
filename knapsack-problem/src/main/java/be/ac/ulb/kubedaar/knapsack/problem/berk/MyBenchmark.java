@@ -504,7 +504,7 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void ga10x100Instances(Blackhole bh, I10x100State state) {
         int rateOfMutation = 2;
-        int populatonSize = 50;
+        int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -516,7 +516,7 @@ public class MyBenchmark {
     @Measurement(iterations = 5)
     public void ga10x250Instances(Blackhole bh, I10x250State state) {
         int rateOfMutation = 2;
-        int populatonSize = 50;
+        int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -545,7 +545,7 @@ public class MyBenchmark {
         Float initialTemp = 100f;
         Float annealingFactor = 0.845f;
         Float finalTemp = 0.00001f;
-        Integer roundsPerTemp = state.pIns.getKnapsacks();
+        Integer roundsPerTemp = state.pIns.getItems();
         state.sa = new SimulatedAnnealing(
                 state.improvedSol, initialTemp, annealingFactor, finalTemp,
                 roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime
@@ -558,7 +558,7 @@ public class MyBenchmark {
     @Measurement(iterations = 20)
     public void gaF510x250Instances(Blackhole bh, F5I10x250State state) {
         int rateOfMutation = 2;
-        int populatonSize = 50;
+        int populatonSize = 100;
         state.ga = new GeneticAlgorithm(
                 rateOfMutation, populatonSize,
                 state.maxTime, state.pIns, RANDOM_SEEDS[state.counter]
@@ -572,7 +572,7 @@ public class MyBenchmark {
         Float initialTemp = 100f;
         Float annealingFactor = 0.845f;
         Float finalTemp = 0.00001f;
-        Integer roundsPerTemp = state.pIns.getKnapsacks();
+        Integer roundsPerTemp = state.pIns.getItems();
         state.sa = new SimulatedAnnealing(
                 state.improvedSol, initialTemp, annealingFactor, finalTemp,
                 roundsPerTemp, RANDOM_SEEDS[state.counter], state.maxTime

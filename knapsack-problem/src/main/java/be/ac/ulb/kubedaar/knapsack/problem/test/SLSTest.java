@@ -29,14 +29,14 @@ public class SLSTest {
         System.out.println("********** Random Soltuion **********");
         RandomSolution rs = new RandomSolution(i1, 12345L);
         rs.getFeasibleSolution();
-        //rs.printSolution();
+        rs.printSolution();
         System.out.println("********** Random Soltuion FI **********");
         Improvement rfi = new BestImprovement(rs);
         Solution nfirsol = rfi.getImprovedSolution();
-        //nfirsol.printSolution();
-        /*System.out.println("********** SA Random Soltuion **********");
+        nfirsol.printSolution();
+        System.out.println("********** SA Random Soltuion **********");
         SimulatedAnnealing sar = new SimulatedAnnealing(nfirsol, 100f, 0.845f, 0.00001f, 250, 7440L, 250d);//85
-        sar.getSolution().printSolution();*/
+        sar.getSolution().printSolution();
         System.out.println("********** GA Random Soltuion **********");
         GeneticAlgorithm ga = new GeneticAlgorithm(2, 75, 250d, i1, 7440L);
         ga.getSolution().printSolution();
